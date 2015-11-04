@@ -6,51 +6,15 @@
    .lastmod { color: #A4A4A4; font-size: 6pt; bottom: 5pt; position: absolute; cursor:help;}
    .lastmod:hover {animation: text-high 1s ease-in-out;}
    h1 { font-size: 5vw; font-weight: 200;cursor:default;}
-   .typed-cursor{
-    opacity: 1;
-    -webkit-animation: blink 0.7s infinite;
-    -moz-animation: blink 0.7s infinite;
-    animation: blink 0.7s infinite;
-    }
-    @keyframes blink {
-        0% { opacity:1; }
-        50% { opacity:0; }
-        100% { opacity:1; }
-    }
-    @-webkit-keyframes blink {
-        0% { opacity:1; }
-        50% { opacity:0; }
-        100% { opacity:1; }
-    }
-    @-moz-keyframes blink {
-        0% { opacity:1; }
-        50% { opacity:0; }
-        100% { opacity:1; }
-    }
    img { width: 15vw; height:auto; }
-    @keyframes text-unhigh {
-     from, to {color: transparent;}
-    50% {color: white;}
-    }
 </style>
 <title>Coming Soon.</title>
 <script src="https://code.jquery.com/jquery-2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="typed.min.js" type="text/javascript" charset="utf-8"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <body>
 <br><br>
 <br><br><br><br><br><br><br><br>
-<script>
-    $(function(){
-        $("#typed").typed({
-            strings: ["^1000Coming Soon.", "^1000 Sorry for the wait...", "^2000<img src=\"https://img.shields.io/badge/status-epic-blue.svg\" height=\"20\" width=\"auto\" /><br>"],
-             typeSpeed: 0,
-             loop: true,
-             cursorChar: ""
-        });
-    });
-</script>
-<div id="typed"></div>
+<div>Please wait...awesome things are coming.</div>
 <div class="lastmod" onclick="alert('Come back later for more updates in this box!');">
 Last changed 10/3/15
 </div>
