@@ -1,1 +1,63 @@
-hi
+<!--Thanks for looking at the source!!! ~ AppleCrazy-->
+<!DOCTYPE HTML>
+<style type="text/css" media="all">
+    @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200);
+   body {background-color:black; color:white; font-family: "San Francisco","Helvetica Neue","Source Sans Pro",helvetica, arial, sans-serif; text-align:center;} 
+   .lastmod { color: #A4A4A4; font-size: 6pt; bottom: 5pt; position: absolute; cursor:help;}
+   .lastmod:hover {animation: text-high 1s ease-in-out;}
+   h1 { font-size: 5vw; font-weight: 200;cursor:default;}
+   .typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+    }
+    @keyframes blink {
+        0% { opacity:1; }
+        50% { opacity:0; }
+        100% { opacity:1; }
+    }
+    @-webkit-keyframes blink {
+        0% { opacity:1; }
+        50% { opacity:0; }
+        100% { opacity:1; }
+    }
+    @-moz-keyframes blink {
+        0% { opacity:1; }
+        50% { opacity:0; }
+        100% { opacity:1; }
+    }
+   img { width: 15vw; height:auto; }
+    @keyframes text-unhigh {
+     from, to {color: transparent;}
+    50% {color: white;}
+    }
+</style>
+<title>Coming Soon.</title>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="typed.min.js" type="text/javascript" charset="utf-8"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<body>
+<br><br>
+<br><br><br><br><br><br><br><br>
+<script>
+    $(function(){
+        $("#typed").typed({
+            strings: ["Coming Soon.", "^1000 Sorry for the wait..."],
+             typeSpeed: 0,
+             loop: true,
+             cursorChar: ""
+        });
+    });
+</script>
+<div id="typed"></div>
+<div class="lastmod" onclick="alert('Come back later for more updates in this box!');">
+<?php
+echo "<br /><br /><br /><br /><br />";
+echo "Last changed ".date("n.j.y.",filemtime("index.html"));
+?>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<img src="applecrazylogo.png" alt="AppleCrazy logo" />
+</body>
+</html>
