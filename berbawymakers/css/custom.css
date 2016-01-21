@@ -5,8 +5,7 @@
 
 
 body {
-		background-repeat: repeat repeat;
-	background-image: url("http://etc.usf.edu/presentations/backgrounds/grid/grid_02/1104m.gif");
+	background-color: rgb(204, 204, 204);
 }
 }
 #nav {
