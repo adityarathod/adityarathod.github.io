@@ -23,13 +23,22 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton.css">
   <link rel="stylesheet" href="css/custom.css">
+  <script>
+    function c() {
+      var pwd = prompt("This page is in development. Please enter a passphrase.");
+      if (person != null && person === "lovepi") {
+      } else {
+        document.location.href = "https://applecrazy.github.io/";
+      }
+    }
+  </script>
 
   <!-- Favicon NEED ONE!!!
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="">
 
 </head>
-<body>
+<body onload="c()">
   <div class="container">
     <div class="row">
       <div class="four columns">
