@@ -19,3 +19,9 @@
 #nav a:hover {
 	text-decoration: underline;
 }
+
+#pictureslider {
+	margin-bottom: 15px;
+	max-width: 100%;
+	height: auto;
+}
