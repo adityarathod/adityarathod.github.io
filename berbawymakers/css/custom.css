@@ -1,10 +1,14 @@
 .container {
 	margin-top: 50px;
 	font-family: Lato, Raleway;
-	background-repeat: repeat repeat;
-	background-image: url("http://etc.usf.edu/presentations/backgrounds/grid/grid_02/1104m.gif");
 }
 
+
+body {
+		background-repeat: repeat repeat;
+	background-image: url("http://etc.usf.edu/presentations/backgrounds/grid/grid_02/1104m.gif");
+}
+}
 #nav {
 	margin: 13px 0 0 0;
 }
