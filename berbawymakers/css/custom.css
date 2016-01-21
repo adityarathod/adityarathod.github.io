@@ -26,11 +26,8 @@
 	height: auto;
 }
 #pictureslider img {
-	max-width: 100%;
+	max-width: 80%;
 	height: auto;
-/*	position: absolute;*/
-	animation: round 8s infinite;
-	opacity: 0;
 }
 @keyframes round {
   25% {
@@ -39,11 +36,4 @@
   40% {
     opacity: 0;
   }
-}
-#pictureslider img:nth-child(1) {
-  animation-delay: 4s;
-}
-
-#pictureslider img:nth-child(2) {
-  animation-delay: 0s;
 }
