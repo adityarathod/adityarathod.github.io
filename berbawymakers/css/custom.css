@@ -22,12 +22,11 @@
 
 #pictureslider {
 	margin-bottom: 15px;
-/*	max-width: 100%;*/
-	max-height: 300px;
+	max-width: 100%;
 	height: auto;
 }
 #pictureslider img {
-	max-width: 80%;
+	max-width: 100%;
 	height: auto;
 }
 @keyframes round {
