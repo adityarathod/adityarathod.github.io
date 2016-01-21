@@ -1,6 +1,8 @@
 .container {
 	margin-top: 50px;
 	font-family: Lato, Raleway;
+	background-repeat: repeat repeat;
+	background-image: url("http://etc.usf.edu/presentations/backgrounds/grid/grid_02/1104m.gif");
 }
 
 #nav {
