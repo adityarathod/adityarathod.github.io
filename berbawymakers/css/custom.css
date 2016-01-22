@@ -36,6 +36,9 @@ body {
 	max-width: 100%;
 	height: auto;
 }
+.social-button {
+	cursor: pointer;
+}
 @keyframes round {
   25% {
     opacity: 1;
