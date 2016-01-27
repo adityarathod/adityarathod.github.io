@@ -39,8 +39,11 @@ body {
 .social-button {
 	cursor: pointer;
 }
-.social-button:hover {
+.social-button fa-twitter-square:hover {
 	color: #55acee;
+}
+.social-button fa-facebook-square:hover {
+	color: #3b5998;
 }
 @keyframes round {
   25% {
