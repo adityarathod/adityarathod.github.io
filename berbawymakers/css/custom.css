@@ -39,6 +39,9 @@ body {
 .social-button {
 	cursor: pointer;
 }
+.social-button:hover {
+	color: #55acee;
+}
 @keyframes round {
   25% {
     opacity: 1;
