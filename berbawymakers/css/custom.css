@@ -38,6 +38,7 @@ body {
 }
 .social-button {
 	cursor: pointer;
+	transition: all 0.5s ease;
 }
 .fa-twitter-square:hover {
 	color: #55acee;
