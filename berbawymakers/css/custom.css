@@ -45,6 +45,9 @@ body {
 .fa-facebook-square:hover {
 	color: #3b5998;
 }
+.fa-envelope:hover {
+	color: #1E82CC;
+}
 @keyframes round {
   25% {
     opacity: 1;
