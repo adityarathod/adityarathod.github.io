@@ -49,6 +49,13 @@ body {
 .fa-envelope:hover {
 	color: #1E82CC;
 }
+.nav-toggle {
+	text-decoration: none;
+	color: black;
+}
+.nav-toggle:hover {
+	text-decoration: underline;
+}
 @keyframes round {
   25% {
     opacity: 1;
