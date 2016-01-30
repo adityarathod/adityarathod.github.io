@@ -23,13 +23,10 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton.css">
   <link rel="stylesheet" href="css/custom.css">
-  <link rel="stylesheet" href="css/glide.theme.css">
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdn.rawgit.com/viljamis/responsive-nav.js/master/responsive-nav.css">
-  <link rel="stylesheet" href="https://cdn.rawgit.com/jedrzejchalubek/Glide.js/master/dist/css/glide.core.min.css">
   <script src="https://cdn.rawgit.com/viljamis/responsive-nav.js/master/responsive-nav.min.js"></script>
   <script src="//code.jquery.com/jquery-latest.min.js"></script>
-  <script src="https://cdn.rawgit.com/jedrzejchalubek/Glide.js/master/dist/glide.min.js"></script>
   <script>
     function c() {
       // var pwd = prompt("This page is in development. Please enter a passphrase.");
@@ -38,8 +35,10 @@
       //   document.location.href = "https://applecrazy.github.io/";
       // }
     }
-    function go() {
-      document.location.href = "https://twitter.com/hashtag/berbawymakers";
+    function go(placeGo) {
+      if (placeGo === 1) { document.location.href = "https://twitter.com/hashtag/berbawymakers"; }
+      else if (placeGo === 2) { alert("Sorry, we don't have an FB page yet."); }
+      else if (placeGo === 2) { document.location.href = "mailto:sberbawy@fremont.k12.ca.us"; }
     }
   </script>
 
@@ -69,26 +68,6 @@
     <div class="row" id="pictureslider">
       <img src="//www.customink.com/photos/system/images/59561/original/GOPR9640.jpg" alt="The Berbawy Makers 2015-16." title="The Berbawy Makers 2015-16."/></div>
     </div>
-    <div class="row">
-      <div id="Glide" class="glide">
-
-    <div class="glide__arrows">
-        <button class="glide__arrow prev" data-glide-dir="<">prev</button>
-        <button class="glide__arrow next" data-glide-dir=">">next</button>
-    </div>
-
-    <div class="glide__wrapper">
-        <ul class="glide__track">
-            <li class="glide__slide">Slide1</li>
-            <li class="glide__slide">Slide2</li>
-            <li class="glide__slide">Slide3</li>
-        </ul>
-    </div>
-
-    <div class="glide__bullets"></div>
-
-</div>
-    </div>
     <div class="row"><div class="twelve columns">&nbsp;</div></div>
     <div class="row">
       <div class="one column">&nbsp;</div>
@@ -99,7 +78,7 @@
     <div class="one column">&nbsp;</div>
     </div>
     <div class="row">
-      <center><h2><i class="fa fa-twitter-square social-button" onclick="go()"></i>&nbsp;&nbsp;&nbsp;<i class="fa fa-facebook-square social-button" onclick=""></i>&nbsp;&nbsp;&nbsp;<i class="fa fa-envelope social-button" onclick=""></i></h2></center>
+      <center><h2><i class="fa fa-twitter-square social-button" onclick="go(1)"></i>&nbsp;&nbsp;&nbsp;<i class="fa fa-facebook-square social-button" onclick="go(2)"></i>&nbsp;&nbsp;&nbsp;<i class="fa fa-envelope social-button" onclick="go(3)"></i></h2></center>
     </div>
     <hr>
     <footer class="row">
