@@ -22,8 +22,8 @@
 
 #slideshow-inner>ul {
     list-style: none;
-    height: 100%;
-    width: 500%;
+    height: auto;
+    width: 100%;
     overflow: hidden;
     position: relative;
     left: 0px;
