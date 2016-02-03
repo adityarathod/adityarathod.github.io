@@ -1,11 +1,3 @@
-@font-face {
-    font-family: 'WebSymbolsRegular';
-    src: url('http://html5css3demos.bplaced.net/css3-slider-v3/websymbols-regular-webfont.eot');
-    src: url('http://html5css3demos.bplaced.net/css3-slider-v3/websymbols-regular-webfont.eot?#iefix') format('embedded-opentype'), url('http://html5css3demos.bplaced.net/css3-slider-v3/websymbols-regular-webfont.woff') format('woff'), url('http://html5css3demos.bplaced.net/css3-slider-v3/websymbols-regular-webfont.ttf') format('truetype'), url('http://html5css3demos.bplaced.net/css3-slider-v3/websymbols-regular-webfont#WebSymbolsRegular') format('svg');
-}
-
-@import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700);
-
 #slideshow-wrap {
     display: block;
     height: 320px;
@@ -113,9 +105,8 @@
 #slideshow-wrap input[type=radio]#button-5:checked~#slideshow-inner>ul { left: -400% }
 
 label.arrows {
-    font-family: 'WebSymbolsRegular';
     font-size: 25px;
-    color: rgb(255,255,240);
+    color: black;
     position: absolute;
     top: 50%;
     margin-top: -25px;
