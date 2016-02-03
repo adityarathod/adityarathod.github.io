@@ -6,20 +6,6 @@
 
 @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700);
 
-* {
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    background-image: url(http://subtlepatterns.com/patterns/dark_wall.png);
-    background-repeat: repeat;
-    height: 500px;
-    padding: 1px;
-}
-
-h1 { color: white }
-
 #slideshow-wrap {
     display: block;
     height: 320px;
