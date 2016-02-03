@@ -22,7 +22,7 @@
 
 #slideshow-inner>ul {
     list-style: none;
-    height: 100%;
+    height: auto;
     width: 100%;
     overflow: hidden;
     position: relative;
