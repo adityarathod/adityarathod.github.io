@@ -14,7 +14,7 @@
 
 #slideshow-inner {
     width: 100%;
-    height: 100%;
+    height: auto;
     background-color: rgb(0,0,0);
     overflow: hidden;
     position: relative;
@@ -22,7 +22,7 @@
 
 #slideshow-inner>ul {
     list-style: none;
-    height: auto;
+    height: 100%;
     width: 100%;
     overflow: hidden;
     position: relative;
