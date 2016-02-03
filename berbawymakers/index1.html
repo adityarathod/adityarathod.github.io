@@ -1,0 +1,105 @@
+<!--
+Berbawy Makers Website
+0.1 Development Beta
+Slated for deployment 2/6/16
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Berbawy Makers</title>
+  <meta name="description" content="The Berbawy Makers website.">
+  <meta name="author" content="AppleCrazy">
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+
+  <!-- CSS & SCRIPTS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css"/>
+// Add the slick-theme.css if you want default styling
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick-theme.css"/>
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.rawgit.com/viljamis/responsive-nav.js/master/responsive-nav.css">
+  <script src="https://cdn.rawgit.com/viljamis/responsive-nav.js/master/responsive-nav.min.js"></script>
+  <script src="//code.jquery.com/jquery-latest.min.js"></script>
+  <script>
+    function c() {
+      // var pwd = prompt("This page is in development. Please enter a passphrase.");
+      // if (pwd != null && pwd === "lovepi") {
+      // } else {
+      //   document.location.href = "https://applecrazy.github.io/";
+      // }
+    }
+    function go(placeGo) {
+      if (placeGo === 1) { document.location.href = "https://twitter.com/hashtag/berbawymakers"; }
+      else if (placeGo === 2) { alert("Sorry, we don't have an FB page yet."); }
+      else if (placeGo === 3) { window.open("mailto:sberbawy@fremont.k12.ca.us"); }
+    }
+  </script>
+
+  <!-- Favicon NEED ONE!!!
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="">
+
+</head>
+<body onload="c()">
+  <div class="container">
+    <div class="row">
+      <div class="four columns">
+        <h2>Berbawy Makers</h2>
+      </div>
+      <div class="eight columns">
+        <div id="nav">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Links</a></li>
+            <li><a href="#">Go</a></li>
+            <li><a href="#">Here</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="row" id="pictureslider">
+      <div><img src="//www.customink.com/photos/system/images/59561/original/GOPR9640.jpg" alt="The Berbawy Makers 2015-16." title="The Berbawy Makers 2015-16."/></div>
+    </div>
+    <div class="row"><div class="twelve columns">&nbsp;</div></div>
+    <div class="row">
+      <div class="one column">&nbsp;</div>
+      <div class="ten columns">
+        <h2>About Us</h2>
+        <p>We're a maker group in <a href="https://www.google.com/maps/place/Fremont,+CA/">Fremont, California</a>. We play with all sorts of toys, from our MakerBots to our Raspberry Pis to our laser cutter.</p>
+      </div>
+    <div class="one column">&nbsp;</div>
+    </div>
+    <div class="row">
+      <center><h2><i class="fa fa-twitter-square social-button" onclick="go(1)"></i>&nbsp;&nbsp;&nbsp;<i class="fa fa-facebook-square social-button" onclick="go(2)"></i>&nbsp;&nbsp;&nbsp;<i class="fa fa-envelope social-button" onclick="go(3)"></i></h2></center>
+    </div>
+    <hr>
+    <footer class="row">
+      <center><small>Designed by AppleCrazy. Built on <a href="http://getskeleton.com/">Skeleton</a>.</small></center></div>
+    </footer>
+  </div>
+  <script>
+  var nav = responsiveNav("#nav", { label:"<h4><i class=\"fa fa-bars\"></i></h4>"});
+  $(document).ready(function(){
+  $('#pictureslider').slick();
+});
+</script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js"></script>
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
