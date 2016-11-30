@@ -18,8 +18,32 @@ SO please, don't doubt me by poking through the source code. But if you're just 
     <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Playfair+Display:700i,900i|Roboto:100,300,400'>
 <link rel='stylesheet' href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
         <link rel="stylesheet" href="css/style.css">
+    <style>
+       /* TEMP STYLES */
+      .ib {
+        font-family: Helvetica, Arial, sans-serif;
+        font-weight: bold;
+        color: white;
+        font-size: 12pt;
+        height: 50px;
+        line-height: 50px;
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #d9534f;
+    }
+
+    .ib-md {
+      margin-top: -50px;
+    }
+    </style>
   </head>
   <body>
+    <div class="ib ib-md">This site is being redesigned soon! Keep checking back on the new look!</div>
 <div class="content" id="top">
   <div class="hero slide">
     <div class="hero-content">
@@ -75,5 +99,13 @@ SO please, don't doubt me by poking through the source code. But if you're just 
   ga('send', 'pageview');
 
 </script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script>
+      $(function() {
+          $('.ib-md').animate({
+                'marginTop' : "+=50px"
+           });
+       });
+    </script>
   </body>
 </html>
