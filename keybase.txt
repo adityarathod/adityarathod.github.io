@@ -1,0 +1,68 @@
+==================================================================
+https://keybase.io/applecrazy
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://applecrazy.github.io
+  * I am applecrazy (https://keybase.io/applecrazy) on keybase.
+  * I have a public key with fingerprint 3FD9 D192 61A7 F80F 4507  BAE4 6625 3E1A 32F1 2CE4
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0101d16aa8d6d2ff4e3742d95bcb73f3bec7f5e1eb1f50523c9077e71f27030ee6900a",
+            "fingerprint": "3fd9d19261a7f80f4507bae466253e1a32f12ce4",
+            "host": "keybase.io",
+            "key_id": "66253e1a32f12ce4",
+            "kid": "0101d16aa8d6d2ff4e3742d95bcb73f3bec7f5e1eb1f50523c9077e71f27030ee6900a",
+            "uid": "7522422854d8100344e7a44470a51419",
+            "username": "applecrazy"
+        },
+        "service": {
+            "hostname": "applecrazy.github.io",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1485827659,
+    "expire_in": 157680000,
+    "prev": "a53b7bf50dbeaa85dea160ad196e29b0b90c25ce6c4dbec79d2727556fc9b1a3",
+    "seqno": 3,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.62
+Comment: https://keybase.io/crypto
+
+yMI1AnicrVJdTBxVGN2VlqaLNPBi6k9qnEJIzHa9987cuTtrjGil0WB4ICW2Sc3m
+3plvYFKYGWZnt7BIE6xEq7Y0tEWkkBZpSWhCbR9MtQ+GLY0PYpX4oCaV9kn8AUtS
+TKwxNN5BfaqP3peb++Wc853v3O9aZVksEb/65NInl94++mx8rjSej+0ZuN3YowjP
+6lYyPcp+WL+g3YJcmN3vWEpGQRhhC+ucpy3dIratgco0YhlUmIKptirAZDYFDALb
+FFGimgZiDBi2CUMqAtANhLiSVGzHbYXADxw3lLKqbRkWNoiOObPTyNYoYoKDpuuE
+qoC5SmxMTNAksc3LRQxpTvAcpBxP1uQju27vP/D/s+/8uhyjhGiEpKlmpTFCqqYB
+45qmMcQp1rARAXMQuLwDJJr7fjuYAS92K71JRdYLjglRtNEs92FSrU7Ylhd/T+YH
+XuiZXrtEtIWhn8tECmG3H1EOgMj+I5YVjmvJRCWjAEHO8VwlgyXSDJ1IHWtpmiZM
+p0ZSgS7fCSDrRAjK9DSSJ+oDhcgFVQUTMgFLgMyKWsCxjrj8Gh2IIZAwkEmoCbqp
+WVFkhkUYYZTqtmkIGbsSjdfpekpGlTZ5q5TMOa0uD/MBKL1XZ/ZtiMUTsfKND0Sb
+Fktsrvp3/xLzm+4h9txg3exnqbLR5alHLxzcNbX9WN/HgydwafKc+uLAwKHa5r7b
+NXPF914r3Xn3wZWqEzeD4m+TtfnyscUrj79R07zyavZQBdyJJzZ8Wu43jXeGpx6Z
+nqh+ZltHo3Nh/lcYPn647mxd/Mjz9Osy0vHyD+nLH52e+H2h+WF36PoT2co3tw33
+fvkWPr33lfmT7t2RHR+gzNaXvuhfWB1f2VJYbdndPlv/Z/0tqL/7c8ONiqeLl7Vv
+Vzfzme/OTFZV4zC1Uxg3aNfMkpe8uDa97Bw4f296Yqy2Ze2b78/CTy98tWnxjys/
+du5dHvn8/QankDre/9gvUHpoaMc7o4ujT/WQD/3S9aau1/8CdLtIIQ==
+=K3Dh
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/applecrazy
+
+==================================================================
