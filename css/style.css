@@ -1,111 +1,38 @@
-body {
-  background-color: black;
+* {
+  -webkit-font-smoothing: antialiased;
+  font-family: Rubik, sans-serif;
+}
+#main {
+  background: url("https://source.unsplash.com/xrVDYZRGdw4/1920x1080");
+  background-size: cover;
+}
+#hello {
   color: white;
-  font-family: Roboto, sans-serif;
   font-weight: 300;
+  min-height: 108px;
+  transition: all 0.5s;
 }
-a {
-  text-decoration: none;
-  color: white;
-  transition-property: color;
-  transition-duration: .5s;
-  cursor: pointer;
+#invite {
+  min-height: 25px;
+  transition: all 0.5s;
 }
-a:hover {
-  color: #2196F3;
+.title {
+  font-weight: 400;
 }
-.content {
-  text-align: center;
-  width: 100vw;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top:0;
-  padding: 0;
-  margin: 0;
+
+@media only screen and (max-width: 1023px) {
+  #hello,
+  #invite, #logohead {
+    text-align: center;
+  }
 }
-.hero-title {
-  font-family: 'Playfair Display', serif;
-  font-style: italic;
-  font-weight: 900;
-  font-size: 50pt;
-}
-.slide {
-  width: 100vw;
-  height: 100vh;
-  text-align: center;
-  left: 0;
-  display: table;
-  font-size: 30pt;
-  background-size:cover;
-}
-.hero {
-  margin:0;
-  background: url('https://pbs.twimg.com/media/CnqqQCAUkAA7uKV.jpg');
-  background-size:cover;
-  line-height: 50pt;
-}
-.hero-content {
-  display: table-cell;
-  vertical-align: middle;
-  background-color: rgba(0,0,0,.7);
-}
-.hero .phrase {
-  font-weight: 100;
-}
-.projects {
-  background: url('https://devicebeeblog.files.wordpress.com/2016/06/smartwatch-828786_1920.jpg?w=778');
-  height: 110vh;
-  background-size:cover;
-}
-.projects-content {
-  display: table-cell;
-  vertical-align: middle;
-  background-color: rgba(0,0,0,.7);
-}
-.projects-title {
-  font-family: Roboto, sans-serif;
-  font-weight: 100;
-  font-size: 35pt;
-  display: block;
-}
-.projects-row img {
-  float: left;
-  margin: 0 20px 20px 20px;
-}
-.projects-row > .project-description {
-  font-size: 14pt;
-  width: initial;
-  text-align: justify;
-  margin-right: 30px;
-}
-.project-description > .desc-spacer {
-  display:block;
-  height: 10px;
-}
-.projects-row > .project-description > .proj-title {
-  font-weight: 100;
-  font-size: 22pt;
-}
-.project-description a {
-  color: #2196F3;
-}
-footer {
-  background-image: url("https://images.unsplash.com/photo-1461352195749-fdba50b79c74?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=e4a220eb5664cd1931992b4886145e77");
-  background-size:cover;
-  text-align: center;
-  background-color: rgba(0,0,0,.7);
-}
-.social-icons a {
-  text-decoration: none;
-  color: white;
-  transition-property: color;
-  transition-duration: .5s;
-  font-size: 30pt;
-}
-.social-icons a:hover {
-  color: #2196F3;
-}
-.social-icons div {
-  display: inline;
+
+@media only screen and (min-width: 1024px) and (min-height: 500px) {
+  #logohead {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
 }
