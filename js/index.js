@@ -21,7 +21,7 @@ hello
 */
 var typed = new Typed("#hello", {
   strings: [
-    "^1000 Hello. ^500 I'm AppleCrazy. ^1500 <br> I make interesting things."
+    "^1000 Hello. ^500 I'm AppleCrazy. ^1500 <br> I make cool things."
   ],
   showCursor: false,
   typeSpeed: 30,
