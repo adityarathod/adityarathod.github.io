@@ -2,27 +2,32 @@
   -webkit-font-smoothing: antialiased;
   font-family: Rubik, sans-serif;
 }
+
 #main {
-  background: url("https://source.unsplash.com/xrVDYZRGdw4/1920x1080");
+  background: black url("https://source.unsplash.com/xrVDYZRGdw4/1920x1080");
   background-size: cover;
 }
+
 #hello {
   color: white;
   font-weight: 300;
   min-height: 108px;
   transition: all 0.5s;
 }
+
 #invite {
   min-height: 25px;
   transition: all 0.5s;
 }
+
 .title {
   font-weight: 400;
 }
 
 @media only screen and (max-width: 1023px) {
   #hello,
-  #invite, #logohead {
+  #invite,
+  #logohead {
     text-align: center;
   }
 }

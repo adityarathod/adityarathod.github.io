@@ -19,19 +19,3 @@
 </nav>
 hello
 */
-var typed = new Typed("#hello", {
-  strings: [
-    "^1000 Hello. ^500 I'm AppleCrazy. ^1500 <br> I make cool things."
-  ],
-  showCursor: false,
-  typeSpeed: 30,
-  onComplete: function() {
-    var typed2 = new Typed('#invite', {
-      strings: [
-    "^2000 Check out my projects below."
-  ],
-  showCursor: false,
-  typeSpeed: 20,
-    })
-  }
-});

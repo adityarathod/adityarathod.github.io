@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8">
   <title>AppleCrazy | Home</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.min.css'>
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css'>
   <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Rubik:300,400,500'>
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
   <section class="hero is-fullheight is-dark" id="main">
     <div class="hero-head" id="logohead">
@@ -19,34 +20,65 @@
     </div>
     <div class="hero-body">
       <div class="container">
-        <p class="title is-1" id="hello"></p>
+        <p class="title is-1" id="hello">Hello. I'm AppleCrazy.
+          <br> I create interesting things.</p>
         <p class="subtitle" id="invite"></p>
       </div>
     </div>
   </section>
   <section class="hero is-dark">
     <div class="hero-body">
+      <div class="heading has-text-centered" style="font-size: 20pt;">By the numbers</div>
+      <br>
       <div class="level">
         <div class="level-item has-text-centered">
           <div>
-            <p class="heading">Contributions ('15-'17)</p>
-            <p class="title">604</p>
+            <p class="heading">Contributions (past 2y)</p>
+            <p class="title">652</p>
+          </div>
+        </div>
+        <div class="level-item has-text-centered">
+          <div>
+            <p class="heading">Blog views</p>
+            <p class="title">9.4K</p>
+          </div>
+        </div>
+        <div class="level-item has-text-centered">
+          <div>
+            <p class="heading">Hacker News Karma</p>
+            <p class="title">197</p>
+          </div>
+        </div>
+        <div class="level-item has-text-centered">
+          <div>
+            <p class="heading">Stack Overflow Reputation</p>
+            <p class="title">179</p>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.6/typed.min.js'></script>
+  <section class="section">
+    <div class="container has-text-centered">&copy; 2017 AppleCrazy. All rights reserved.</div>
+  </section>
   <script src="js/index.js"></script>
   <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-  
-    ga('create', 'UA-75364115-1', 'auto');
-    ga('send', 'pageview');
-  
+  (function(i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function() {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+  ga('create', 'UA-75364115-1', 'auto');
+  ga('send', 'pageview');
+
   </script>
 </body>
+
 </html>
