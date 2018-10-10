@@ -9,6 +9,9 @@ body {
 	justify-content: space-between;
 	flex-direction: row;
 	flex-wrap: wrap;
+}
+
+.fadeInDown {
 	animation-duration: 1s;
 	animation-fill-mode: both;
 	-webkit-animation-duration: 1s;
@@ -77,6 +80,9 @@ body {
 	font-size: 72px;
 	font-weight: 800;
 	letter-spacing: -4px;
+}
+
+.fadeInDown-2 {
 	animation-duration: 2s;
 	animation-fill-mode: both;
 	animation-delay: 200ms;
