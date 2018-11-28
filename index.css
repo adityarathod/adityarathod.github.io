@@ -12,9 +12,9 @@ body {
 }
 
 .fadeInDown {
-	animation-duration: 1s;
+	animation-duration: 0.5s;
 	animation-fill-mode: both;
-	-webkit-animation-duration: 1s;
+	-webkit-animation-duration: 0.5s;
 	-webkit-animation-fill-mode: both;
 	opacity: 0;
 	animation-name: fadeInDown;
@@ -83,15 +83,25 @@ body {
 }
 
 .fadeInDown-2 {
-	animation-duration: 2s;
+	animation-duration: 1s;
 	animation-fill-mode: both;
-	animation-delay: 200ms;
-	-webkit-animation-delay: 500ms;
-	-webkit-animation-duration: 2s;
+	-webkit-animation-duration: 1s;
 	-webkit-animation-fill-mode: both;
 	opacity: 0;
 	animation-name: fadeInUp;
 	-webkit-animation-name: fadeInUp;
+}
+
+.fadeIn-delayed {
+	animation-duration: 1s;
+	animation-fill-mode: both;
+	-webkit-animation-delay: 0.5s;
+	animation-delay: 0.5s;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	opacity: 0;
+	animation-name: fadeIn;
+	-webkit-animation-name: fadeIn;
 }
 
 .a-has-special-padding {
@@ -108,6 +118,15 @@ body {
 	}
 	to {
 		transform: translate3d(0, 0, 0);
+		opacity: 1
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
 		opacity: 1
 	}
 }
