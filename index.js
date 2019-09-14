@@ -13,3 +13,5 @@ var typed = new Typed('.loves-animated', {
     }
     // loop: true
 });
+
+document.getElementById('rm').innerText = "aditya" + "." + "rathod" + "@" + "utdallas.edu";
