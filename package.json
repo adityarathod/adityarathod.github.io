@@ -1,19 +1,34 @@
 {
-  "name": "adityarathod",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
-  },
-  "dependencies": {
-    "autoprefixer": "^9.8.4",
-    "classnames": "^2.2.6",
-    "next": "9.4.4",
-    "postcss-import": "^12.0.1",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
-    "tailwindcss": "^1.4.6"
-  }
+	"name": "adityarathod",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start"
+	},
+	"dependencies": {
+		"autoprefixer": "^9.8.4",
+		"classnames": "^2.2.6",
+		"next": "9.4.4",
+		"postcss-import": "^12.0.1",
+		"react": "16.13.1",
+		"react-dom": "16.13.1",
+		"tailwindcss": "^1.4.6"
+	},
+	"devDependencies": {
+		"@types/node": "^14.0.22",
+		"@types/react": "^16.9.42",
+		"@typescript-eslint/eslint-plugin": "^3.6.0",
+		"@typescript-eslint/parser": "^3.6.0",
+		"eslint": "^7.4.0",
+		"eslint-config-airbnb": "^18.2.0",
+		"eslint-config-prettier": "^6.11.0",
+		"eslint-plugin-import": "^2.22.0",
+		"eslint-plugin-jsx-a11y": "^6.3.1",
+		"eslint-plugin-prettier": "^3.1.4",
+		"eslint-plugin-react": "^7.20.3",
+		"prettier": "^2.0.5",
+		"typescript": "^3.9.6"
+	}
 }
