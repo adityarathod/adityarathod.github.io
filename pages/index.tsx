@@ -5,18 +5,18 @@ import { ThemeContext } from './_app'
 import projects from '../data/projects'
 import ProjectCard from '../components/home/ProjectCard'
 import TopNav from '~/components/shared/TopNav'
+import Footer from '~/components/shared/Footer'
 
 const Home: FC = () => {
 	const { theme } = useContext(ThemeContext)
 	const darkMode = theme === 'dark'
 	return (
 		<>
-			<div className='px-3 pt-8 mx-auto my-0 max-w-3xl'>
-				<Head>
-					<title>Aditya Rathod</title>
-				</Head>
-				<TopNav />
-
+			<Head>
+				<title>Aditya Rathod</title>
+			</Head>
+			<TopNav />
+			<div className='px-3 mx-auto my-0 max-w-3xl'>
 				<h1
 					className={classNames(
 						'text-4xl',
@@ -41,12 +41,12 @@ const Home: FC = () => {
 						machine learning.
 					</p>
 					<p className='my-2'>
-						I'm currently a summer{' '}
+						I&apos;m currently a summer{' '}
 						<span className='font-bold'>Software Developer Intern</span> at RealPage.
 					</p>
 					<p className='mb-2'>
-						Feel free to check out a curated selection of the projects I've built below,
-						or see all my projects and their source code on Github.
+						Feel free to check out a curated selection of the projects I&apos;ve built
+						below, or see all my projects and their source code on Github.
 					</p>
 				</div>
 			</div>
@@ -62,6 +62,7 @@ const Home: FC = () => {
 					/>
 				))}
 			</div>
+			<Footer />
 		</>
 	)
 }

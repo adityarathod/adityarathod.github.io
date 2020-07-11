@@ -8,7 +8,7 @@ const TopNav: FC = () => {
 	const { theme, toggleTheme } = useContext(ThemeContext)
 	const darkMode = theme === 'dark'
 	return (
-		<div className='mb-8'>
+		<div className='my-8'>
 			{/* dark mode toggle */}
 			<button
 				className={classNames(
