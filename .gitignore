@@ -31,3 +31,4 @@ yarn-error.log*
 
 # Mac annoyances
 .DS_Store
+.swp
