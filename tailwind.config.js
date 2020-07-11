@@ -1,5 +1,11 @@
 module.exports = {
-  purge: [],
+  purge: {
+    enabled: process.env.NODE_ENV === 'production',
+    content: [
+      'components/**/*.js',
+      'pages/**/*.js',
+    ]
+  },
   theme: {
     colors: {
       // colors from https://noahgilmore.com/blog/dark-mode-uicolor-compatibility/
