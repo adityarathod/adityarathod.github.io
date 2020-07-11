@@ -5,4 +5,5 @@
 body {
 	transition: all 0.25s ease-in-out;
 	transition-property: background color background-color filter;
+	background-color: black;
 }
