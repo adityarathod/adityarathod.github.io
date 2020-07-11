@@ -2,6 +2,7 @@ module.exports = {
   purge: [],
   theme: {
     colors: {
+      // colors from https://noahgilmore.com/blog/dark-mode-uicolor-compatibility/
       label: {
         light: 'rgba(0.0, 0.0, 0.0, 1.0)',
         dark: 'rgba(255.0, 255.0, 255.0, 1.0)'
