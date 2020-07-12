@@ -1,6 +1,9 @@
 import React, { ComponentType, FC, useState } from 'react'
 import '../styles/_app.css'
 import classNames from 'classnames'
+import { MDXProvider } from '@mdx-js/react'
+import TopNav from '../components/shared/TopNav'
+import components from '../components/blog'
 
 interface IThemeContext {
 	theme: string
@@ -29,12 +32,14 @@ const App: FC<AppProps> = (props: AppProps) => {
 	const ctx = { theme, toggleTheme }
 	return (
 		<ThemeContext.Provider value={ctx}>
-			<Component
-				{...pageProps}
-				className={classNames(
-					theme === 'dark' ? 'bg-systemBackground-dark' : 'bg-systemBackground-light'
-				)}
-			/>
+			<MDXProvider components={components}>
+				<Component
+					{...pageProps}
+					className={classNames(
+						theme === 'dark' ? 'bg-systemBackground-dark' : 'bg-systemBackground-light'
+					)}
+				/>
+			</MDXProvider>
 		</ThemeContext.Provider>
 	)
 }

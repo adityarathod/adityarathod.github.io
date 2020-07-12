@@ -8,20 +8,8 @@ const TopNav: FC = () => {
 	const { theme, toggleTheme } = useContext(ThemeContext)
 	const darkMode = theme === 'dark'
 	return (
-		<div className='my-8'>
+		<div className='my-8 mx-auto w-full'>
 			{/* dark mode toggle */}
-			<button
-				className={classNames(
-					'absolute',
-					'text-sm',
-					'font-bold',
-					'outline-none',
-					darkMode ? 'text-systemBlue-dark' : 'text-systemBlue-light'
-				)}
-				style={{ top: '10px', right: '10px', outline: 'none' }}
-				onClick={() => toggleTheme()}>
-				{theme} mode
-			</button>
 			<button
 				className={classNames(
 					'absolute',
