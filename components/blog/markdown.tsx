@@ -84,7 +84,7 @@ export const blockquote = MarkdownFCFactory(
 		{ dark: 'text-secondaryLabel-dark', light: 'text-secondaryLabel-light' },
 		{ dark: 'border-systemGray-dark', light: 'border-systemGray-light' },
 	],
-	['mx-3', 'px-4', 'py-1', 'border-l-4', 'italic', 'leading-tight'],
+	['mx-3', 'px-4', 'mt-1', 'py-1', 'border-l-4', 'italic', 'leading-tight'],
 	'blockquote'
 )
 export const hr = (props: any) => {
@@ -123,5 +123,4 @@ export const td = MarkdownFCFactory(
 	'td'
 )
 export const a = MarkdownFCFactory([{ dark: 'text-link-dark', light: 'text-link-light' }], [], 'a')
-
 export const img = MarkdownFCFactory([], ['mx-auto', 'my-4', 'text-center'], 'img')

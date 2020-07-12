@@ -1,4 +1,5 @@
 import React, { FC, useContext } from 'react'
+import Error from 'next/error'
 import classNames from 'classnames'
 import { ThemeContext } from '../../pages/_app'
 import TopNav from '../shared/TopNav'
@@ -24,6 +25,9 @@ const BigHeader = (props: { title: string }) => {
 interface IMdxPage {
 	frontMatter: {
 		title: string
+		description: string
+		date: string
+		draft: boolean
 	}
 	children?: React.ReactNode
 }
@@ -31,7 +35,9 @@ interface IMdxPage {
 const PageWrapper: FC<IMdxPage> = (props: IMdxPage) => {
 	const { theme } = useContext(ThemeContext)
 	const darkMode = theme === 'dark'
-	console.log(props)
+	if (props.frontMatter.draft) {
+		return <Error statusCode={404} />
+	}
 	return (
 		<>
 			<TopNav />
@@ -49,6 +55,14 @@ const PageWrapper: FC<IMdxPage> = (props: IMdxPage) => {
 				)}
 				style={{ borderRadius: '15px' }}>
 				<BigHeader title={props.frontMatter.title} />
+				<div
+					className={classNames(
+						'mb-6',
+						'text-center',
+						darkMode ? 'text-secondaryLabel-dark' : 'text-secondaryLabel-light'
+					)}>
+					{props.frontMatter.date}
+				</div>
 				{props.children}
 			</main>
 		</>

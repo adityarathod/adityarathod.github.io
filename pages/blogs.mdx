@@ -1,35 +1,29 @@
-<!-- ---
-title: 'Analyzing Browser History Using Python and Pandas'
-description: 'Explore the depths of your browser history with this introductory data science tutorial.'
-date: 2017-11-12T15:39:30-08:00
-draft: false
-layout: post
-image: '/post_images/browser-hist-graph.png'
---- -->
-
 export const frontMatter = {
 	title: 'Analyzing Browser History Using Python and Pandas',
+	description:
+		'Explore the depths of your browser history with this introductory data science tutorial.',
+	date: 'November 12, 2017',
+	draft: false,
 }
 
 Today, we're going to do some splunking within the deep, dark place which is your browser history.
 In order to obtain the data for this tutorial from Google Chrome, go to
-
 `~/Library/Application Support/Google/Chrome/Default`
-
 on a Mac/Linux computer or `%LocalAppData%\Google\Chrome\User Data\Default` on a Windows PC.
-
 Run the following SQLite command to obtain a text file in reverse chronological order:
 
 (Mac/Linux)
 
 ```bash
-sqlite3 History "select datetime(last_visit_time/1000000-11644473600,'unixepoch'),url from  urls order by last_visit_time desc" > ~/hist.txt
+sqlite3 History "select datetime(last_visit_time/1000000-11644473600,'unixepoch'), url \
+from urls order by last_visit_time desc" > ~/hist.txt
 ```
 
 (Windows)
 
 ```bash
-sqlite History "select datetime(last_visit_time/1000000-11644473600,'unixepoch'),url from  urls order by last_visit_time desc" > %userprofile%\hist.txt
+sqlite3 History "select datetime(last_visit_time/1000000-11644473600,'unixepoch'), url \
+from urls order by last_visit_time desc" > %userprofile%\hist.txt
 ```
 
 Check your user folder. A file called `hist.txt` should be there. Move the file to a suitable place for this exercise.
@@ -47,7 +41,9 @@ import numpy as np
 
 That data that we pulled is extremely messy. Here's an example row:
 
-    2017-11-12 21:10:11|https://news.ycombinator.com/item?id=15678587
+```wiki
+2017-11-12 21:10:11|https://news.ycombinator.com/item?id=15678587
+```
 
 We need to split on that vertical bar while making sure not to split on a bar in the URL itself.
 Since Pandas probably doesn't do this out of the box, let's write a custom import function:
@@ -62,7 +58,9 @@ raw_data = [line.split('|', 1) for line in [x.strip() for x in content]]
 print(raw_data[1])
 ```
 
-    ['2017-11-12 21:09:21', 'https://news.ycombinator.com/']
+```wiki
+['2017-11-12 21:09:21', 'https://news.ycombinator.com/']
+```
 
 Using our 2D list, let's make a Pandas DataFrame with custom column headers.
 
@@ -92,8 +90,6 @@ Double-check that it is indeed a Pandas timestamp:
 ```python
 data.datetime[0]
 ```
-
-    Timestamp('2017-11-12 21:10:11')
 
 Finally, let's remove all information from the URL, leaving only the domain/subdomain:
 
@@ -161,8 +157,6 @@ plt.show()
 ![Pie Chart](/blog/post_images/browser-hist-graph.png)
 
 What else can we do with the data? A lot, I'm sure, since this is the Holy Grail for ad tracking companies.
-
-Next week, I'll try to predict browsing trends using this collected dataset.
 
 # Hello there
 

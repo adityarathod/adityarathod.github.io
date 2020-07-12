@@ -1,8 +1,8 @@
 import React, { ComponentType, FC, useState } from 'react'
 import '../styles/_app.css'
+import '../styles/prism-atom-dark.css'
 import classNames from 'classnames'
 import { MDXProvider } from '@mdx-js/react'
-import TopNav from '../components/shared/TopNav'
 import components from '../components/blog'
 
 interface IThemeContext {
