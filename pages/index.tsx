@@ -4,18 +4,16 @@ import classNames from 'classnames'
 import { ThemeContext } from './_app'
 import projects from '../data/projects'
 import ProjectCard from '../components/home/ProjectCard'
-import TopNav from '~/components/shared/TopNav'
-import Footer from '~/components/shared/Footer'
+import Layout from '../components/shared/Layout'
 
 const Home: FC = () => {
 	const { theme } = useContext(ThemeContext)
 	const darkMode = theme === 'dark'
 	return (
-		<>
+		<Layout>
 			<Head>
 				<title>Aditya Rathod</title>
 			</Head>
-			<TopNav />
 			<div className='px-3 mx-auto my-0 max-w-3xl'>
 				<h1
 					className={classNames(
@@ -62,8 +60,7 @@ const Home: FC = () => {
 					/>
 				))}
 			</div>
-			<Footer />
-		</>
+		</Layout>
 	)
 }
 
