@@ -4,6 +4,7 @@ import '../styles/prism-atom-dark.css'
 import classNames from 'classnames'
 import { MDXProvider } from '@mdx-js/react'
 import components from '../components/blog'
+import Head from 'next/head'
 
 interface IThemeContext {
 	theme: string
@@ -31,16 +32,23 @@ const App: FC<AppProps> = (props: AppProps) => {
 	}
 	const ctx = { theme, toggleTheme }
 	return (
-		<ThemeContext.Provider value={ctx}>
-			<MDXProvider components={components}>
-				<Component
-					{...pageProps}
-					className={classNames(
-						theme === 'dark' ? 'bg-systemBackground-dark' : 'bg-systemBackground-light'
-					)}
-				/>
-			</MDXProvider>
-		</ThemeContext.Provider>
+		<>
+			<Head>
+				<meta httpEquiv='Content-Type' content='text/html; charset=utf-8' />
+			</Head>
+			<ThemeContext.Provider value={ctx}>
+				<MDXProvider components={components}>
+					<Component
+						{...pageProps}
+						className={classNames(
+							theme === 'dark'
+								? 'bg-systemBackground-dark'
+								: 'bg-systemBackground-light'
+						)}
+					/>
+				</MDXProvider>
+			</ThemeContext.Provider>
+		</>
 	)
 }
 

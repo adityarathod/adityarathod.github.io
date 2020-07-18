@@ -3,7 +3,6 @@
 import React, { useContext } from 'react'
 import classNames from 'classnames'
 import { ThemeContext } from '../../pages/_app'
-import Link from 'next/link'
 
 interface IDarkLightModePair {
 	light: string
@@ -34,57 +33,31 @@ const MarkdownFCFactory = (
 	return ThemedFC
 }
 
-export const p = MarkdownFCFactory(
-	[{ dark: 'text-label-dark', light: 'text-label-light' }],
-	['mb-4', 'text-justify'],
-	'p'
-)
-export const h1 = MarkdownFCFactory(
-	[{ dark: 'text-label-dark', light: 'text-label-light' }],
-	['text-2xl', 'font-bold', 'mt-4'],
-	'h1'
-)
-export const h2 = MarkdownFCFactory(
-	[{ dark: 'text-label-dark', light: 'text-label-light' }],
-	['text-xl', 'font-medium'],
-	'h2'
-)
-export const h3 = MarkdownFCFactory(
-	[{ dark: 'text-label-dark', light: 'text-label-light' }],
-	['text-lg'],
-	'h3'
-)
-export const h4 = MarkdownFCFactory(
-	[{ dark: 'text-label-dark', light: 'text-label-light' }],
-	['text-md'],
-	'h4'
-)
+const textLabel = { dark: 'text-label-dark', light: 'text-label-light' }
+
+export const p = MarkdownFCFactory([textLabel], ['my-4', 'leading-relaxed'], 'p')
+export const h1 = MarkdownFCFactory([textLabel], ['text-2xl', 'font-bold', 'mt-4'], 'h1')
+export const h2 = MarkdownFCFactory([textLabel], ['text-xl', 'font-medium', 'my-2'], 'h2')
+export const h3 = MarkdownFCFactory([textLabel], ['text-lg'], 'h3')
+export const h4 = MarkdownFCFactory([textLabel], ['text-md'], 'h4')
 export const h5 = MarkdownFCFactory(
-	[{ dark: 'text-label-dark', light: 'text-label-light' }],
+	[textLabel],
 	['text-md', 'font-medium', 'tracking-widest'],
 	'h5'
 )
 export const h6 = MarkdownFCFactory(
-	[{ dark: 'text-label-dark', light: 'text-label-light' }],
+	[textLabel],
 	['uppercase', 'font-medium', 'tracking-widest'],
 	'h6'
 )
-export const ul = MarkdownFCFactory(
-	[{ dark: 'text-label-dark', light: 'text-label-light' }],
-	['list-disc', 'mx-6', 'my-2'],
-	'ul'
-)
-export const ol = MarkdownFCFactory(
-	[{ dark: 'text-label-dark', light: 'text-label-light' }],
-	['list-decimal', 'mx-6', 'my-2'],
-	'ol'
-)
+export const ul = MarkdownFCFactory([textLabel], ['list-disc', 'mx-6', 'my-2'], 'ul')
+export const ol = MarkdownFCFactory([textLabel], ['list-decimal', 'mx-6', 'my-2'], 'ol')
 export const blockquote = MarkdownFCFactory(
 	[
 		{ dark: 'text-secondaryLabel-dark', light: 'text-secondaryLabel-light' },
 		{ dark: 'border-systemGray-dark', light: 'border-systemGray-light' },
 	],
-	['mx-3', 'px-4', 'mt-1', 'py-1', 'border-l-4', 'italic', 'leading-tight'],
+	['mx-3', 'px-4', 'py-1', 'border-l-4', 'italic', 'leading-tight'],
 	'blockquote'
 )
 export const hr = (props: any) => {
@@ -101,24 +74,14 @@ export const hr = (props: any) => {
 		/>
 	)
 }
-export const table = MarkdownFCFactory(
-	[{ dark: 'text-label-dark', light: 'text-label-light' }],
-	['table-auto', 'my-4', 'mx-auto'],
-	'table'
-)
+export const table = MarkdownFCFactory([textLabel], ['table-auto', 'my-6', 'mx-auto'], 'table')
 export const th = MarkdownFCFactory(
-	[
-		{ dark: 'text-label-dark', light: 'text-label-light' },
-		{ dark: 'bg-tertiarySystemFill-dark', light: 'bg-tertiarySystemFill-light' },
-	],
+	[textLabel, { dark: 'bg-tertiarySystemFill-dark', light: 'bg-tertiarySystemFill-light' }],
 	['font-bold', 'text-center', 'px-4', 'py-2', 'align-middle'],
 	'th'
 )
 export const td = MarkdownFCFactory(
-	[
-		{ dark: 'text-label-dark', light: 'text-label-light' },
-		{ dark: 'bg-quaternarySystemFill-dark', light: 'bg-quaternarySystemFill-light' },
-	],
+	[textLabel, { dark: 'bg-quaternarySystemFill-dark', light: 'bg-quaternarySystemFill-light' }],
 	['px-4', 'py-2', 'align-middle'],
 	'td'
 )
