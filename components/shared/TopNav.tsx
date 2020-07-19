@@ -32,10 +32,12 @@ const TopNav: FC = () => {
 					)}>
 					Aditya Rathod
 				</h1>
-				<div className='px-4 max-w-md mx-auto my-0 flex flex-row items-center justify-between'>
+				<div className='px-4 max-w-lg mx-auto my-0 flex flex-row items-center justify-between'>
 					<TopLink href='/' text='home' />
 					<TopLinkDivider />
 					<TopLink href='//github.com/adityarathod' text='github' />
+					<TopLinkDivider />
+					<TopLink href='//linkedin.com/in/aditya-rathod' text='linkedin' />
 					<TopLinkDivider />
 					<TopLinkStatic href='/resume.pdf' text='resumé' />
 					<TopLinkDivider />

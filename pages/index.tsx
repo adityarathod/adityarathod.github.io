@@ -35,11 +35,10 @@ const Home: FC = () => {
 					)}>
 					<p>
 						I&apos;m a <span className='font-bold'>rising sophomore</span> at The
-						University of Texas at Dallas who&apos;s interested in data science and
-						machine learning.
+						University of Texas at Dallas.
 					</p>
 					<p className='my-2'>
-						I&apos;m currently a summer{' '}
+						I currently work as a summer{' '}
 						<span className='font-bold'>Software Developer Intern</span> at RealPage.
 					</p>
 					<p className='mb-2'>
