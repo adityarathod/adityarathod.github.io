@@ -56,6 +56,7 @@ const Home: FC = () => {
 						description={project.description}
 						imageUrl={project.image}
 						bkdColor={project.color}
+						href={project.link}
 						key={idx}
 					/>
 				))}
