@@ -1,7 +1,7 @@
 import React, { FC, useContext } from 'react'
 import classNames from 'classnames'
 import { ThemeContext } from '../../pages/_app'
-import TopLink from './TopLink'
+import TopLink, { TopLinkStatic } from './TopLink'
 import TopLinkDivider from './TopLinkDivider'
 
 const TopNav: FC = () => {
@@ -37,7 +37,7 @@ const TopNav: FC = () => {
 					<TopLinkDivider />
 					<TopLink href='//github.com/adityarathod' text='github' />
 					<TopLinkDivider />
-					<TopLink href='/resume.pdf' text='resumé' />
+					<TopLinkStatic href='/resume.pdf' text='resumé' />
 					<TopLinkDivider />
 					<TopLink href='/blog' text='blog' />
 				</div>

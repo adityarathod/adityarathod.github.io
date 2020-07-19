@@ -1,11 +1,15 @@
-import React, { useContext } from 'react'
+import React, { FC, useContext } from 'react'
 import classNames from 'classnames'
 import posts from '~/data/posts'
 import Layout from '~/components/shared/Layout'
 import { ThemeContext } from '../_app'
 import Link from 'next/link'
 
-const Blog = () => {
+interface BlogProps {
+	posts: typeof posts
+}
+
+const Blog: FC<BlogProps> = (props: BlogProps) => {
 	const { theme } = useContext(ThemeContext)
 	return (
 		<Layout>
@@ -23,7 +27,7 @@ const Blog = () => {
 				Blog
 			</h1>
 			<div className='my-0 mx-auto max-w-4xl px-6 cursor-pointer'>
-				{posts.map((post, idx) => (
+				{props.posts.map((post, idx) => (
 					<Link href={`/blog/${post.slug}`} key={idx}>
 						<div
 							className={classNames(
@@ -63,6 +67,14 @@ const Blog = () => {
 			</div>
 		</Layout>
 	)
+}
+
+export function getStaticProps(): { props: { posts: typeof posts } } {
+	return {
+		props: {
+			posts,
+		},
+	}
 }
 
 export default Blog
