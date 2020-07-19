@@ -1,4 +1,4 @@
-import React, { ComponentType, FC, useState } from 'react'
+import React, { ComponentType, FC, useState, useEffect } from 'react'
 import '../styles/_app.css'
 import '../styles/prism-atom-dark.css'
 import classNames from 'classnames'
@@ -25,11 +25,46 @@ interface AppProps {
 
 const App: FC<AppProps> = (props: AppProps) => {
 	const { Component, pageProps } = props
+
+	const getPersistedState = () => {
+		let mode
+		if (
+			typeof window !== 'undefined' &&
+			typeof window.localStorage !== 'undefined' &&
+			typeof window.matchMedia !== 'undefined'
+		) {
+			// is a modern browser
+			const retrievedMode = localStorage.getItem('darkModeState')
+			if (!retrievedMode) {
+				mode = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+			} else {
+				mode = retrievedMode
+			}
+		} else {
+			// is not modern or is not a browser (SRR)
+			mode = 'light'
+		}
+		return mode
+	}
+
+	// light mode users will get a "flash of darkness" before their preferred theme is loaded,
+	// which is unfortunate but ¯\_(ツ)_/¯, you can't please everyone.
 	const [theme, setTheme] = useState('dark')
+
+	useEffect(() => {
+		setTheme(getPersistedState())
+	}, [])
+
 	const toggleTheme = () => {
 		setTheme(theme === 'light' ? 'dark' : 'light')
-		if (document) document.body.style.background = theme === 'light' ? 'black' : 'white'
 	}
+
+	useEffect(() => {
+		if (typeof window !== 'undefined') {
+			localStorage.setItem('darkModeState', theme)
+		}
+		if (document) document.body.style.background = theme === 'dark' ? 'black' : 'white'
+	}, [theme])
 	const ctx = { theme, toggleTheme }
 	return (
 		<>
