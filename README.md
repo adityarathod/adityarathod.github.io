@@ -1,30 +1,40 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Aditya Rathod's Portfolio Site
 
-## Getting Started
+This site is powered by NextJS.
 
-First, run the development server:
+## Development
 
-```bash
-npm run dev
-# or
-yarn dev
+### Stack/Tooling
+
+-   NextJS/React
+-   Tailwind CSS
+-   Yarn
+
+## Content Creation
+
+-   To add a new project, modify `data/projects.ts`
+-   To add a new blog post:
+    -   Create a directory under `pages/blog` with your post slug
+    -   Put an `index.mdx` file inside it
+    -   Ensure you use the front matter template belowto pass metadata to the layout component.
+    -   Copy some metadata and the post slug into `date/posts.ts`. Yes, this is a pain.
+    -   Make sure all images are in `public/static/img`
+
+### Front Matter Template
+
+```js
+export const frontMatter = {
+	title: 'Some title',
+	description: 'Some description',
+	date: 'Some date',
+	draft: true,
+	hasMath: false,
+}
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Deployment
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+-   `yarn deploy` will handle the following things for you:
+    -   Building a NextJS app with CSS purged and bundle size reduced
+    -   Exporting said app to static HTML that can be pushed to Github Pages
+    -   Pushing to the `master` branch
