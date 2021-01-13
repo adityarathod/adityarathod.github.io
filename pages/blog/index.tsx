@@ -1,9 +1,6 @@
-import React, { FC, useContext } from 'react'
-import classNames from 'classnames'
-import posts from '~/data/posts'
-import Layout from '~/components/shared/Layout'
-// import { ThemeContext } from '../_app'
+import React, { FC } from 'react'
 import Link from 'next/link'
+import posts from '~/data/posts'
 
 interface BlogProps {
 	posts: typeof posts
