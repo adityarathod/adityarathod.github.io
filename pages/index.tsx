@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Hero from '~/components/hero'
 import Project from '~/components/project'
 import projectsByYear, { ProjectData } from '~/data/projects'
+import { NextSeo } from 'next-seo'
 
 const Index: FC = () => {
 	const years = Object.keys(projectsByYear).sort((a, b) => parseInt(b) - parseInt(a))
@@ -12,6 +13,17 @@ const Index: FC = () => {
 			<div
 				className='grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 mba-6 gap-12'
 				key={idx}>
+				<NextSeo
+					title='Aditya Rathod'
+					description='Aditya is a sophomore computer science major at The University of Texas at Dallas.'
+					canonical='https://adityarathod.github.io/'
+					openGraph={{
+						url: 'https://adityarathod.github.io/',
+						title: 'Aditya Rathod',
+						description:
+							'Aditya is a sophomore computer science major at The University of Texas at Dallas.',
+					}}
+				/>
 				<div className='col-span-2 sm:col-span-2 md:col-span-1 lg:col-span-1 xl:col-span-1 border border-white border-l-0 border-r-0 sm:border-r-0 md:border-r-4 lg:border-r-4 xl:border-r-4 border-t-0 border-b-0'>
 					<div className='pt-4 flex flex-row items-center justify-start sm:justify-start md:justify-end lg:justify-end xl:justify-end'>
 						<h1 className='font-bold text-4xl pr-8'>{year}</h1>

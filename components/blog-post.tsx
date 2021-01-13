@@ -1,6 +1,7 @@
 import React, { FC } from 'react'
 import Head from 'next/head'
 import Error from 'next/error'
+import { NextSeo } from 'next-seo'
 
 interface PostWrapperProps {
 	frontMatter: {
@@ -9,23 +10,19 @@ interface PostWrapperProps {
 		date: string
 		draft: boolean
 		hasMath: boolean
+		pubTime: string
 	}
 	children?: React.ReactNode
 }
 
 const PostWrapper: FC<PostWrapperProps> = ({
-	frontMatter: { title, description, hasMath, date, draft },
+	frontMatter: { title, description, hasMath, date, draft, pubTime },
 	children,
 }: PostWrapperProps) => {
 	if (draft) return <Error statusCode={404} />
 	return (
 		<>
 			<Head>
-				<meta property='og:title' content={title} />
-				<meta property='og:description' content={description} />
-				<meta property='og:type' content='article' />
-				<meta name='description' content={description} />
-				<title>{title}</title>
 				{hasMath && (
 					<link
 						rel='stylesheet'
@@ -34,6 +31,19 @@ const PostWrapper: FC<PostWrapperProps> = ({
 					/>
 				)}
 			</Head>
+			<NextSeo
+				title={`Aditya Rathod: ${title}`}
+				description={description}
+				openGraph={{
+					title,
+					description,
+					type: 'article',
+					article: {
+						publishedTime: pubTime,
+						authors: ['https://adityarathod.github.io/'],
+					},
+				}}
+			/>
 			<main className='mt-12'>
 				<div className='mb-8 mx-auto max-w-xl'>
 					<h1 className='mb-2 text-3xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl font-bold text-center'>

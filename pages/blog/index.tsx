@@ -2,6 +2,8 @@ import React, { FC } from 'react'
 import Link from 'next/link'
 import posts from '~/data/posts'
 
+import { NextSeo } from 'next-seo'
+
 interface BlogProps {
 	posts: typeof posts
 }
@@ -22,6 +24,16 @@ const Blog: FC<BlogProps> = ({ posts }: BlogProps) => {
 	))
 	return (
 		<>
+			<NextSeo
+				title='Aditya Rathod: Blog'
+				description='View blog posts by Aditya.'
+				canonical='https://adityarathod.github.io/blog/'
+				openGraph={{
+					url: 'https://adityarathod.github.io/blog/',
+					title: 'Aditya Rathod: Blog',
+					description: 'View blog posts by Aditya.',
+				}}
+			/>
 			<div className='mt-12'>
 				<h1 className='text-4xl font-bold mb-4'>Latest Blog Posts</h1>
 				{postList}

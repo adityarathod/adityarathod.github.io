@@ -5,23 +5,19 @@ export const frontMatter = {
 	date: 'November 12, 2017',
 	draft: false,
 	hasMath: false,
+	pubTime: '2017-11-12T20:00:00Z'
 }
-
 Today, we're going to do some splunking within the deep, dark place which is your browser history.
 In order to obtain the data for this tutorial from Google Chrome, go to
 `~/Library/Application Support/Google/Chrome/Default`
 on a Mac/Linux computer or `%LocalAppData%\Google\Chrome\User Data\Default` on a Windows PC.
 Run the following SQLite command to obtain a text file in reverse chronological order:
-
 (Mac/Linux)
-
 ```bash
 sqlite3 History "select datetime(last_visit_time/1000000-11644473600,'unixepoch'), url \
 from urls order by last_visit_time desc" > ~/hist.txt
 ```
-
 (Windows)
-
 ```bash
 sqlite3 History "select datetime(last_visit_time/1000000-11644473600,'unixepoch'), url \
 from urls order by last_visit_time desc" > %userprofile%\hist.txt
