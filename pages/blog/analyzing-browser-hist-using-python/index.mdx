@@ -5,6 +5,7 @@ export const frontMatter = {
 	date: 'November 12, 2017',
 	draft: false,
 	hasMath: false,
+	pubTime: '2017-11-12T20:00:00Z',
 }
 
 Today, we're going to do some splunking within the deep, dark place which is your browser history.
@@ -12,7 +13,6 @@ In order to obtain the data for this tutorial from Google Chrome, go to
 `~/Library/Application Support/Google/Chrome/Default`
 on a Mac/Linux computer or `%LocalAppData%\Google\Chrome\User Data\Default` on a Windows PC.
 Run the following SQLite command to obtain a text file in reverse chronological order:
-
 (Mac/Linux)
 
 ```bash
@@ -38,7 +38,7 @@ import pandas as pd
 import numpy as np
 ```
 
-# Clean Up Data
+## Clean Up Data
 
 That data that we pulled is extremely messy. Here's an example row:
 
@@ -112,11 +112,11 @@ data.head(1)
 
 Finally, our data is clean.
 
-# Analyzing the Data
+## Analyzing the Data
 
 Now that the boring part is done, let's analyze our browsing data.
 
-## Most Visited Sites
+### Most Visited Sites
 
 Let's generate a list of our top sites sorted by frequency, then print out the first two to get our most visited sites:
 

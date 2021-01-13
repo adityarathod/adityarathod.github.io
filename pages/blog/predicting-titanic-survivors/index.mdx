@@ -1,4 +1,4 @@
-import Desmos from '../../../components/blog/desmos'
+import Desmos from '~/components/desmos'
 export const frontMatter = {
 	title: 'Predicting Titanic Survivors: My First Machine Learning Model',
 	description:
@@ -6,9 +6,8 @@ export const frontMatter = {
 	date: 'August 4, 2018',
 	draft: false,
 	hasMath: true,
+	pubTime: '2018-08-04T23:00:00Z',
 }
-
-# Introduction
 
 I've been taking the [Machine Learning course by Dr. Andrew Ng](https://www.coursera.org/learn/machine-learning) online through Coursera, and so far it's been an enlightening and enjoyable experience. While I've been taking lots of notes on the equations and implementation details on linear and logistic regression models, I thought it would be a fun weekend exercise to implement these algorithms from scratch using my favorite toolkit: Python, Pandas, and Numpy.
 
@@ -40,7 +39,7 @@ For reference, my project directory was structured like this:
 
 The `Makefile` in the main directory has a fake target to make launching `jupyter lab` easier.
 
-# Step 1: Preparing the Data
+## Preparing the Data
 
 I first needed to clean the data before I could use it. In order to do that, I first brought the data into a pandas `DataFrame`:
 
@@ -57,7 +56,7 @@ df = df.drop(columns=['Name', 'PassengerId', 'Ticket', 'Cabin'])
 
 **Note:** Having fewer features means the model was less accurate than it could be. Some clever feature engineering would have made use of these columns somehow, but as I was a beginner, I didn't really know what to do with these features other than throw them out.
 
-Next, I converted all of the textual features into numerical values roughly within the range $ (-1, 1) $.
+Next, I converted all of the textual features into numerical values roughly within the range $(-1, 1)$.
 
 ```python
 def sex_to_numerical(s):
@@ -73,7 +72,7 @@ df.Sex = df.Sex.apply(sex_to_numerical)
 df.Embarked = df.Embarked.apply(embarkation_to_numerical)
 ```
 
-Next, I normalized the data using a simple approach: $(value - max)/range$, where $range = max - min$.
+I then normalized the data using a simple approach: $(value - max)/range$, where $range = max - min$.
 
 ```python
 def normalize_ticket_class(cl):
@@ -86,7 +85,7 @@ df.Fare = normalize_fare(df.Fare)
 df.Pclass = df.Pclass.apply(normalize_ticket_class)
 ```
 
-Then, I needed to convert all missing/`NaN` values in the `Age` column to numbers so that I didn't need to throw that feature out:
+I needed to convert all missing/`NaN` values in the `Age` column to numbers so that I didn't need to throw that feature out:
 
 ```python
 def de_nan_age(a):
@@ -131,7 +130,7 @@ y = np.asmatrix(labels).T
 
 The data is now ready to be used.
 
-# Step 2: Define Variables
+## Define Variables
 
 Using $X$ and $y$, it's time to define some variables that are important to the implmentation of the _cost function_ $J$:
 
@@ -156,9 +155,9 @@ alpha = 0.001
 
 It's important to choose the right $\alpha$, because a smaller value may make the model slower to converge, while a larger value might make the model never converge.
 
-# Step 3: Define Functions
+## Define Functions
 
-## The Sigmoid Function
+### The Sigmoid Function
 
 One of the most important equations needed for logistic regression is the sigmoid function, which looks like this:
 
@@ -176,7 +175,7 @@ def sigmoid(z):
     return np.divide(1, t)
 ```
 
-## The Hypothesis Function
+### The Hypothesis Function
 
 To generate a matrix of predictions using the parameter vector $\theta$, we define our hypothesis function $h_{\theta}(x)$ as follows:
 
@@ -193,7 +192,7 @@ def hypothesis(x):
     return sigmoid(x * theta)
 ```
 
-## The Cost Function
+### The Cost Function
 
 In order for the logistic regression algorithm to _learn_, it must have some function to minimize. This function is called the _cost_ or _loss_ function.
 
@@ -214,13 +213,13 @@ def cost():
     return cost[0,0]
 ```
 
-## The Gradient Descent Function
+### The Gradient Descent Function
 
 The last (and probably most important) piece of this machine learning algorithm is the `gradient_descent_step` function, which calculates the gradient for $\theta$.
 
 The update rule for $\theta$ is as follows:
 
-$$ \theta := \theta - \frac{\alpha}{m}X^T(g(X\theta)-\vec{y}) $$
+$$\theta := \theta - \frac{\alpha}{m}X^T(g(X\theta)-\vec{y})$$
 
 This is simple to implement in Python as a one-liner:
 
@@ -231,7 +230,7 @@ def gradient_descent_step(theta):
 
 With all the necessary functions implemented, it's time to actually learn the parameters $\theta$.
 
-# Step 4: Run the Learning Algorithm
+## Run the Learning Algorithm
 
 To run the learning algorithm, let's create a loop in which `gradient_descent_step` is run every iteration:
 
@@ -257,9 +256,9 @@ theta = np.asmatrix(np.loadtxt("theta.txt"))
 theta = theta.T
 ```
 
-# Step 5: Run the Model on Test Data
+## Run the Model on Test Data
 
-## Create the Prediction Function
+### Create the Prediction Function
 
 Using the `hypothesis(x)` function, let's define a function that outputs `1` if $P(y=1|x;\theta) ≥ 0.5$ or `0` otherwise:
 
@@ -272,7 +271,7 @@ def predict(x):
 
 `predict(x)` runs predictions on a matrix element-wise and converts them into numerical binary values.
 
-## Import the Test Data
+### Import the Test Data
 
 Now, it's time to bring in the test data, preparing it like we did for the training data:
 
@@ -295,7 +294,7 @@ test_X = np.append(x_zero_column_test, test_X, axis=1)
 test_X = np.asmatrix(test_X)
 ```
 
-## Generate Predictions
+### Generate Predictions
 
 Using the `test_X` matrix, let's generate predictions and save them to a file:
 
@@ -304,7 +303,7 @@ predictions = predict(test_X)
 np.savetxt("predictions.txt", predictions)
 ```
 
-## Prepare Submission For Kaggle
+### Prepare Submission For Kaggle
 
 The `predictions.txt` file isn't in the format that Kaggle needs for submission. Let's put our predictions into a pandas `DataFrame` along with the `PassengerId` column:
 
@@ -324,7 +323,7 @@ Let's export to CSV for upload to Kaggle:
 submission_df.to_csv("kaggle_submission.csv", index=False)
 ```
 
-# Results
+## Results
 
 According to Kaggle's online judge, my model had an accuracy of 74.641% on the test dataset, which is not great by machine learning standards, but was nevertheless exciting for me, since I implemented the model (almost) from scratch.
 
@@ -333,7 +332,7 @@ This was an improvement over my submission from last year, which was a linear re
 ![Kaggle leaderboard screenshot](/static/img/kaggle-score-logistic.png)
 _**Figure 2:** Pics or it didn't happen_
 
-# Conclusion
+## Conclusion
 
 This project was also a chance to dip my toes into creating Machine Learning models for use on real data, taking the theory and applying it to a real-world problem.
 

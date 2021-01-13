@@ -1,71 +1,44 @@
-import React, { FC, useContext } from 'react'
-import classNames from 'classnames'
-import posts from '~/data/posts'
-import Layout from '~/components/shared/Layout'
-import { ThemeContext } from '../_app'
+import React, { FC } from 'react'
 import Link from 'next/link'
+import posts from '~/data/posts'
+
+import { NextSeo } from 'next-seo'
 
 interface BlogProps {
 	posts: typeof posts
 }
 
-const Blog: FC<BlogProps> = (props: BlogProps) => {
-	const { theme } = useContext(ThemeContext)
+const Blog: FC<BlogProps> = ({ posts }: BlogProps) => {
+	const postList = posts.map((post, idx) => (
+		<Link href={`/blog/${post.slug}`} key={idx}>
+			<a className=''>
+				<div className='py-10 hover:opacity-70 transition-opacity'>
+					<h4 className='text-sm font-semibold text-cyan uppercase' role='doc-subtitle'>
+						{post.date}
+					</h4>
+					<h2 className='text-2xl text-white font-bold'>{post.title}</h2>
+					<p className='text-md mt-2 opacity-80 text-white'>{post.description}</p>
+				</div>
+			</a>
+		</Link>
+	))
 	return (
-		<Layout>
-			<h1
-				className={classNames(
-					theme === 'dark' ? 'text-label-dark' : 'text-label-light',
-					'text-5xl',
-					'font-bold',
-					'mx-auto',
-					'my-0',
-					'max-w-xl',
-					'mb-6',
-					'text-center'
-				)}>
-				Blog
-			</h1>
-			<div className='my-0 mx-auto max-w-4xl px-6 cursor-pointer'>
-				{props.posts.map((post, idx) => (
-					<Link href={`/blog/${post.slug}`} key={idx}>
-						<div
-							className={classNames(
-								'mt-12',
-								'py-6',
-								'px-6',
-								'rounded-lg',
-								theme === 'dark' ? 'text-label-dark' : 'text-label-light',
-								theme === 'dark'
-									? 'bg-secondarySystemBackground-dark'
-									: 'bg-secondarySystemBackground-light'
-							)}>
-							<h3 className={classNames('text-2xl', 'font-medium')}>{post.title}</h3>
-							<h4
-								className={classNames(
-									'text-lg',
-									// 'max-w-2xl',
-									theme === 'dark'
-										? 'text-secondaryLabel-dark'
-										: 'text-secondaryLabel-light'
-								)}>
-								{post.description}
-							</h4>
-							<h5
-								className={classNames(
-									'text-md',
-									// 'max-w-2xl',
-									theme === 'dark'
-										? 'text-tertiaryLabel-dark'
-										: 'text-tertiaryLabel-light'
-								)}>
-								{post.date}
-							</h5>
-						</div>
-					</Link>
-				))}
+		<>
+			<NextSeo
+				title='Aditya Rathod: Blog'
+				description='View blog posts by Aditya.'
+				canonical='https://adityarathod.github.io/blog/'
+				openGraph={{
+					url: 'https://adityarathod.github.io/blog/',
+					title: 'Aditya Rathod: Blog',
+					description: 'View blog posts by Aditya.',
+				}}
+			/>
+			<div className='mt-12'>
+				<h1 className='text-4xl font-bold mb-4'>Latest Blog Posts</h1>
+				{postList}
 			</div>
-		</Layout>
+		</>
 	)
 }
 

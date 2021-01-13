@@ -1,9 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,500;0,700;1,400;1,500;1,700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
-	transition: all 0.25s ease-in-out;
-	transition-property: background color background-color filter;
-	background-color: black;
+	@apply bg-space;
+	@apply text-white;
 }

@@ -1,67 +1,63 @@
-import React, { FC, useContext } from 'react'
+import { FC } from 'react'
 import Head from 'next/head'
-import classNames from 'classnames'
-import { ThemeContext } from './_app'
-import projects from '../data/projects'
-import ProjectCard from '../components/home/ProjectCard'
-import Layout from '../components/shared/Layout'
+import Hero from '~/components/hero'
+import Project from '~/components/project'
+import projectsByYear, { ProjectData } from '~/data/projects'
+import { NextSeo } from 'next-seo'
 
-const Home: FC = () => {
-	const { theme } = useContext(ThemeContext)
-	const darkMode = theme === 'dark'
+const Index: FC = () => {
+	const years = Object.keys(projectsByYear).sort((a, b) => parseInt(b) - parseInt(a))
+	const yearEntries = years.map((year, idx) => {
+		const projects = projectsByYear[year] as ProjectData[]
+		return (
+			<div
+				className='grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 mba-6 gap-12'
+				key={idx}>
+				<NextSeo
+					title='Aditya Rathod'
+					description='Aditya is a sophomore computer science major at The University of Texas at Dallas.'
+					canonical='https://adityarathod.github.io/'
+					openGraph={{
+						url: 'https://adityarathod.github.io/',
+						title: 'Aditya Rathod',
+						description:
+							'Aditya is a sophomore computer science major at The University of Texas at Dallas.',
+					}}
+				/>
+				<div className='col-span-2 sm:col-span-2 md:col-span-1 lg:col-span-1 xl:col-span-1 border border-white border-l-0 border-r-0 sm:border-r-0 md:border-r-4 lg:border-r-4 xl:border-r-4 border-t-0 border-b-0'>
+					<div className='pt-4 flex flex-row items-center justify-start sm:justify-start md:justify-end lg:justify-end xl:justify-end'>
+						<h1 className='font-bold text-4xl pr-8'>{year}</h1>
+						<div className='text-cyan hidden sm:hidden md:block lg:block xl:block'>
+							<svg
+								viewBox='0 0 100 100'
+								xmlns='http://www.w3.org/2000/svg'
+								width='20'
+								height='20'
+								style={{ marginRight: '-12px' }}
+								className='fill-current'>
+								<circle cx='50' cy='50' r='50' />
+							</svg>
+						</div>
+					</div>
+				</div>
+				<div className='col-span-2 pb-6'>
+					{projects.map((proj, pIdx) => (
+						<Project project={proj} key={pIdx} />
+					))}
+				</div>
+			</div>
+		)
+	})
+
 	return (
-		<Layout>
+		<main>
 			<Head>
 				<title>Aditya Rathod</title>
 			</Head>
-			<div className='px-3 mx-auto my-0 max-w-3xl'>
-				<h1
-					className={classNames(
-						'text-4xl',
-						'text-center',
-						'font-medium',
-						darkMode ? 'text-label-dark' : 'text-label-light'
-					)}>
-					👋&emsp;Hi, I&apos;m Aditya.
-				</h1>
-
-				<div
-					className={classNames(
-						'mt-4',
-						'text-center',
-						'text-xl',
-						'font-light',
-						darkMode ? 'text-label-dark' : 'text-label-light'
-					)}>
-					<p>
-						I&apos;m a <span className='font-bold'>rising sophomore</span> at The
-						University of Texas at Dallas.
-					</p>
-					<p className='my-2'>
-						I currently work as a summer{' '}
-						<span className='font-bold'>Software Developer Intern</span> at RealPage.
-					</p>
-					<p className='mb-2'>
-						Feel free to check out a curated selection of the projects I&apos;ve built
-						below, or see all my projects and their source code on Github.
-					</p>
-				</div>
-			</div>
-			<div className='mt-4 flex flex-row justify-center items-center mx-auto my-0 max-w-screen-xl flex-wrap card-container'>
-				{projects.map((project, idx) => (
-					<ProjectCard
-						title={project.title}
-						subtitle={project.type.toUpperCase()}
-						description={project.description}
-						imageUrl={project.image}
-						bkdColor={project.color}
-						href={project.link}
-						key={idx}
-					/>
-				))}
-			</div>
-		</Layout>
+			<Hero />
+			<div className='pt-24 max-w-3xl mx-auto'>{yearEntries}</div>
+		</main>
 	)
 }
 
-export default Home
+export default Index

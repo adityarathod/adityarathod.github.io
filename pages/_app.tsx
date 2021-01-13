@@ -1,90 +1,51 @@
-import React, { ComponentType, FC, useState, useEffect } from 'react'
-import '../styles/_app.css'
-import '../styles/prism-atom-dark.css'
-import classNames from 'classnames'
-import { MDXProvider } from '@mdx-js/react'
-import components from '../components/blog'
+import React, { FC } from 'react'
+import { AppProps } from 'next/app'
 import Head from 'next/head'
 
-interface IThemeContext {
-	theme: string
-	toggleTheme: () => void
-}
+import { MDXProvider } from '@mdx-js/react'
+import { DefaultSeo } from 'next-seo'
 
-export const ThemeContext = React.createContext<IThemeContext>({
-	theme: 'dark',
-	// eslint-disable-next-line @typescript-eslint/no-empty-function
-	toggleTheme: () => {},
-})
+import '../styles/_app.css'
+import '../styles/prism-dracula.css'
 
-interface AppProps {
-	Component: ComponentType
-	// eslint-disable-next-line @typescript-eslint/no-explicit-any
-	pageProps: any
-}
+import postComponents from '../components/blog-post'
+import Navbar from '~/components/navbar'
+import Footer from '~/components/footer'
 
 const App: FC<AppProps> = (props: AppProps) => {
 	const { Component, pageProps } = props
 
-	const getPersistedState = () => {
-		let mode
-		if (
-			typeof window !== 'undefined' &&
-			typeof window.localStorage !== 'undefined' &&
-			typeof window.matchMedia !== 'undefined'
-		) {
-			// is a modern browser
-			const retrievedMode = localStorage.getItem('darkModeState')
-			if (!retrievedMode) {
-				mode = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
-			} else {
-				mode = retrievedMode
-			}
-		} else {
-			// is not modern or is not a browser (SRR)
-			mode = 'light'
-		}
-		return mode
-	}
-
-	// light mode users will get a "flash of darkness" before their preferred theme is loaded,
-	// which is unfortunate but ¯\_(ツ)_/¯, you can't please everyone.
-	const [theme, setTheme] = useState('dark')
-
-	useEffect(() => {
-		setTheme(getPersistedState())
-	}, [])
-
-	const toggleTheme = () => {
-		setTheme(theme === 'light' ? 'dark' : 'light')
-	}
-
-	useEffect(() => {
-		if (typeof window !== 'undefined') {
-			localStorage.setItem('darkModeState', theme)
-		}
-		if (document) document.body.style.background = theme === 'dark' ? 'black' : 'white'
-	}, [theme])
-	const ctx = { theme, toggleTheme }
-	return (
-		<>
+	const pageWrapper = (
+		<div className='py-10 px-8 sm:px-8 md:px-10 lg:px-10 xl:px-10 max-w-5xl mx-auto'>
 			<Head>
 				<meta httpEquiv='Content-Type' content='text/html; charset=utf-8' />
 			</Head>
-			<ThemeContext.Provider value={ctx}>
-				<MDXProvider components={components}>
-					<Component
-						{...pageProps}
-						className={classNames(
-							theme === 'dark'
-								? 'bg-systemBackground-dark'
-								: 'bg-systemBackground-light'
-						)}
-					/>
-				</MDXProvider>
-			</ThemeContext.Provider>
-		</>
+			<DefaultSeo
+				openGraph={{
+					type: 'website',
+					locale: 'en_US',
+					url: 'https://adityarathod.github.io/',
+					site_name: 'Aditya Rathod',
+					profile: {
+						firstName: 'Aditya',
+						lastName: 'Rathod',
+					},
+				}}
+				twitter={{
+					handle: '@adibytes',
+					site: '@adibytes',
+					cardType: 'summary',
+				}}
+			/>
+			<Navbar />
+			<MDXProvider components={postComponents}>
+				<Component {...pageProps} />
+			</MDXProvider>
+			<Footer />
+		</div>
 	)
+
+	return pageWrapper
 }
 
 export default App
