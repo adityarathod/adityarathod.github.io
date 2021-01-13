@@ -5,8 +5,6 @@
 @tailwind utilities;
 
 body {
-	transition: all 0.25s ease-in-out;
-	transition-property: background color background-color filter;
 	@apply bg-space;
 	@apply text-white;
 }
