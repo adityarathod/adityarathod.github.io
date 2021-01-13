@@ -42,12 +42,16 @@ const Navbar: FC = () => {
 				{/* <button className='mr-5 text-white opacity-70 hover:opacity-100 transition-opacity'>
 					<Night className='fill-current w-5' />
 				</button> */}
-				<button className='mx-3 text-white opacity-70 hover:opacity-100 transition-opacity'>
+				<a
+					className='mx-3 text-white opacity-70 hover:opacity-100 transition-opacity'
+					href='//github.com/adityarathod'>
 					<Github className='fill-current w-5' />
-				</button>
-				<button className='mx-3 text-white opacity-70 hover:opacity-100 transition-opacity'>
+				</a>
+				<a
+					className='mx-3 text-white opacity-70 hover:opacity-100 transition-opacity'
+					href='//linkedin.com/in/aditya-rathod'>
 					<LinkedIn className='fill-current w-5' />
-				</button>
+				</a>
 			</div>
 		</header>
 	)
