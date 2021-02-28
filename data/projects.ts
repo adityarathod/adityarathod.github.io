@@ -10,6 +10,24 @@ export interface ProjectData {
 export const projects: Record<number, ProjectData[]> = {
 	2021: [
 		{
+			title: 'Comparison of Online Portfolio Selection Algorithms',
+			type: 'Research Project',
+			description:
+				'Comparing the real-world performance of current approaches to OLPS on a variety of portfolios and trading frequencies.',
+			image: null,
+			color: null,
+			link: '//github.com/ACM-Research/online-portfolio-selection',
+		},
+		{
+			title: 'Texas Grid Load Tracker: Real-Time Power Capacity Graph',
+			type: 'Web Scraper + Dashboard',
+			description:
+				'Collected, stored, and displayed ERCOT capacity and usage data graphs throughout the Texas winter storm crisis.',
+			image: null,
+			color: null,
+			link: '/texas-grid-load-tracker',
+		},
+		{
 			title: 'Hackback: Jamstack-Friendly Hackathon Registration & Hosting System',
 			type: 'Web App',
 			description: null,
@@ -28,6 +46,15 @@ export const projects: Record<number, ProjectData[]> = {
 		},
 	],
 	2020: [
+		{
+			title: 'ACM Hacktoberfest: On-Brand Interactive Event Site',
+			type: 'Website',
+			description:
+				'Collaborated with an team of designers and writers to develop a centralized hub for event information.',
+			image: null,
+			color: null,
+			link: '//hacktoberfest.acmutd.co/',
+		},
 		{
 			title: 'Leasing Tablet Hybrid @ RealPage',
 			type: 'Internship Project',
