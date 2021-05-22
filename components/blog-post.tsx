@@ -44,7 +44,7 @@ const PostWrapper: FC<PostWrapperProps> = ({
 					},
 				}}
 			/>
-			<main className='mt-12'>
+			<main className='mt-24'>
 				<div className='mb-8 mx-auto max-w-xl'>
 					<h1 className='mb-2 text-3xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl font-bold text-center'>
 						{title}
