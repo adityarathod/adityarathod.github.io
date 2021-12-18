@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 module.exports = {
 	siteMetadata: {
 		siteUrl: 'https://www.yourdomain.tld',
@@ -15,5 +16,13 @@ module.exports = {
 			},
 			__key: 'pages',
 		},
+		'gatsby-transformer-json',
+		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
+				name: `data`,
+				path: `./src/data/`,
+			},
+		}
 	],
 }
