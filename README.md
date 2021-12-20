@@ -1,6 +1,6 @@
 # Aditya Rathod's Portfolio Site
 
-This site is powered by NextJS.
+This site is powered by GatsbyJS.
 
 ## Development
 
