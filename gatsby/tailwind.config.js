@@ -1,8 +1,5 @@
 module.exports = {
-	purge: {
-		enabled: process.env.NODE_ENV === 'production',
-		content: ['./src/**/*.{js,jsx,ts,tsx}'],
-	},
+	content: ['./src/**/*.{js,jsx,ts,tsx}'],
 	theme: {
 		fontFamily: {
 			sans: [
@@ -85,5 +82,5 @@ module.exports = {
 		},
 	},
 	variants: {},
-	plugins: [],
+	plugins: [require('@tailwindcss/typography')],
 }

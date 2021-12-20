@@ -8,3 +8,12 @@ body {
 	@apply bg-space;
 	@apply text-white;
 }
+
+pre {
+	font-size: 12pt !important;
+	font-weight: normal;
+}
+
+.katex {
+	@apply overflow-x-scroll overflow-y-hidden;
+}
