@@ -5,5 +5,16 @@
 	"editor.formatOnSave": true,
 	"editor.tabSize": 2,
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
-	"discord.enabled": true
+	"eslint.options": {
+		"extensions": [".js", ".jsx", ".md", ".mdx", ".ts", ".tsx"]
+	},
+	"eslint.validate": [
+		"markdown",
+		"mdx",
+		"javascript",
+		"javascriptreact",
+		"typescript",
+		"typescriptreact"
+	],
+	"rpc.enabled": false
 }

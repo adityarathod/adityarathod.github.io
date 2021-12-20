@@ -1,8 +1,5 @@
 module.exports = {
-	purge: {
-		enabled: process.env.NODE_ENV === 'production',
-		content: ['components/**/*.tsx', 'pages/**/*.tsx', 'pages/**/*.mdx'],
-	},
+	content: ['./src/**/*.{js,jsx,ts,tsx}'],
 	theme: {
 		fontFamily: {
 			sans: [
