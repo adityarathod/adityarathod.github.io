@@ -8,10 +8,8 @@ import Projects from '../components/projects'
 
 const IndexPage: FC<PageProps> = () => {
 	const {
-		data: {
-			site: {
-				siteMetadata: { siteUrl },
-			},
+		site: {
+			siteMetadata: { siteUrl },
 		},
 	} = useStaticQuery(graphql`
 		query {
@@ -23,7 +21,7 @@ const IndexPage: FC<PageProps> = () => {
 		}
 	`)
 	return (
-		<Layout title='Aditya Rathod | Home'>
+		<Layout title='Home'>
 			<Meta
 				title='Aditya Rathod'
 				description='Aditya is a computer science junior at The University of Texas at Dallas.'
