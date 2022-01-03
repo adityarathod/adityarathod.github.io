@@ -5,6 +5,9 @@ module.exports = {
 		title: 'Aditya Rathod',
 	},
 	plugins: [
+		{
+      resolve: "gatsby-plugin-no-sourcemaps",
+    },
 		'gatsby-plugin-postcss',
 		'gatsby-plugin-react-helmet',
 		{
