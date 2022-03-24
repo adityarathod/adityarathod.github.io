@@ -7,35 +7,35 @@ import Navbar from '../components/navbar'
 import Projects from '../components/projects'
 
 const IndexPage: FC<PageProps> = () => {
-	const {
-		site: {
-			siteMetadata: { siteUrl },
-		},
-	} = useStaticQuery(graphql`
-		query {
-			site {
-				siteMetadata {
-					siteUrl
-				}
-			}
-		}
-	`)
-	return (
-		<Layout title='Home'>
-			<Meta
-				title='Aditya Rathod'
-				description='Aditya is a computer science junior at The University of Texas at Dallas.'
-				domain={siteUrl}
-				image={`${siteUrl}/og-image.png`}
-				url={siteUrl}
-			/>
-			<Navbar />
-			<Hero />
-			<section className='pt-24 max-w-3xl mx-auto'>
-				<Projects />
-			</section>
-		</Layout>
-	)
+  const {
+    site: {
+      siteMetadata: { siteUrl },
+    },
+  } = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          siteUrl
+        }
+      }
+    }
+  `)
+  return (
+    <Layout title="Home">
+      <Meta
+        title="Aditya Rathod"
+        description="Aditya is a computer science junior at The University of Texas at Dallas."
+        domain={siteUrl}
+        image={`${siteUrl}/og-image.png`}
+        url={siteUrl}
+      />
+      <Navbar />
+      <Hero />
+      <section className="pt-24 max-w-3xl mx-auto">
+        <Projects />
+      </section>
+    </Layout>
+  )
 }
 
 export default IndexPage

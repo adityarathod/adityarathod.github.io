@@ -36,3 +36,5 @@ hasMath: false
     -   Building a Gatsby app with CSS purged and bundle size reduced
     -   Exporting said app to static HTML that can be pushed to Github Pages
     -   Pushing to the `master` branch
+
+&copy; 2022 - present Aditya Rathod. All rights reserved.

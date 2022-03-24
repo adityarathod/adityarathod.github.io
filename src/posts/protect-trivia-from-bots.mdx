@@ -15,10 +15,10 @@ _Mobile trivia apps_, such as HQ Trivia and The Q, modernize game show-style ent
 
 While the demo was certainly impressive, I felt that I could improve on this system as a proof-of-concept. Armed with his post, I set out to make a better version of his system. However, I set some constraints on myself to make this more of a challenge:
 
--   The system must run offline, with the exception of the QAS (question-and-answer system).
--   The system allow a human enough time to tap in the answer.
--   The system should require minimal human intervention, since a human will be using the system in real time.
--   The system must be functional within one hour.
+- The system must run offline, with the exception of the QAS (question-and-answer system).
+- The system allow a human enough time to tap in the answer.
+- The system should require minimal human intervention, since a human will be using the system in real time.
+- The system must be functional within one hour.
 
 ## Creating a Trivia-Cheating System
 
@@ -110,13 +110,14 @@ The script waits for the enter key, grabs the predefined rect, runs OCR on it, a
 I ran tests on this system using video replays of previous HQ Trivia shows. It worked well but struggled on the more difficult questions. Here's a video of the system providing an instant answer to a question:
 
 <center>
-	<iframe
-		width='560'
-		height='315'
-		src='https://www.youtube-nocookie.com/embed/F1m6ZyqIvhs?rel=0'
-		frameborder='0'
-		allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
-		allowfullscreen></iframe>
+  <iframe
+    width="560"
+    height="315"
+    src="https://www.youtube-nocookie.com/embed/F1m6ZyqIvhs?rel=0"
+    frameborder="0"
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+  ></iframe>
 </center>
 
 In my opinion, this checks all the boxes–it works offline, it's fast, and it's pretty much self-sufficient.

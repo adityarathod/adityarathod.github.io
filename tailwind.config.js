@@ -3,6 +3,7 @@ module.exports = {
 	theme: {
 		fontFamily: {
 			sans: [
+				'Urbanist',
 				'DM Sans',
 				'system-ui',
 				'-apple-system',
@@ -73,7 +74,7 @@ module.exports = {
 			},
 			colors: {
 				// custom colors
-				space: '#070d2c',
+				space: '#1c1f29',
 				orange: '#ff3f0a',
 				cyan: '#1ac8ed',
 				spring: '#0fff95',

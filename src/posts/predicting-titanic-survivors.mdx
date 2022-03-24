@@ -21,9 +21,9 @@ The dataset I decided to work with for this project was the was the [Kaggle Tita
 ![Titanic Dataset Data](./images/titanic-training.png)
 
 <center>
-	<em>
-		<strong>Figure 1:</strong> Structure of the dataset
-	</em>
+  <em>
+    <strong>Figure 1:</strong> Structure of the dataset
+  </em>
 </center>
 
 Based on the `train.csv` file included in the dataset download, it was clear that this was a binary classification problem. Since I only know how to implement linear and logistic regression models so far, I decided to use logistic regression for this problem.
@@ -169,12 +169,12 @@ It's important to choose the right <InlineMath math="\alpha"/>, because a smalle
 One of the most important equations needed for logistic regression is the sigmoid function, which looks like this:
 
 <center>
-	<Desmos url='https://www.desmos.com/calculator/hvlhutwrba?embed' />
+  <Desmos url="https://www.desmos.com/calculator/hvlhutwrba?embed" />
 </center>
 
 The equation for the sigmoid function is
 
-<BlockMath math='g(z) = \frac{1}{1+ e^{-z}}' />
+<BlockMath math="g(z) = \frac{1}{1+ e^{-z}}" />
 
 Thanks to numpy, it's very simple to define an element-wise vectorized sigmoid function, which will our code much more efficient:
 
@@ -188,7 +188,7 @@ def sigmoid(z):
 
 To generate a matrix of predictions using the parameter vector <InlineMath math="\theta" />, we define our hypothesis function <InlineMath math="h_{\theta}(x)" /> as follows:
 
-<BlockMath math='h_{\theta}(x) = g(X\theta)' />
+<BlockMath math="h_{\theta}(x) = g(X\theta)" />
 
 where <InlineMath math="X"/> is the design matrix.
 
@@ -208,7 +208,7 @@ In order for the logistic regression algorithm to _learn_, it must have some fun
 
 For logistic regression, the cost function is defined as:
 
-<BlockMath math='J(\theta) = \frac{1}{m} \bigg(-y^T \log{h(x)}- (1-y^T)\log{(1-h(x))}\bigg)' />
+<BlockMath math="J(\theta) = \frac{1}{m} \bigg(-y^T \log{h(x)}- (1-y^T)\log{(1-h(x))}\bigg)" />
 
 The Python code for this function came out to be too long to write out on one line, so the math is done on three separate lines.
 
@@ -229,7 +229,7 @@ The last (and probably most important) piece of this machine learning algorithm 
 
 The update rule for <InlineMath math="\theta" /> is as follows:
 
-<BlockMath math='\theta := \theta - \frac{\alpha}{m}X^T(g(X\theta)-\vec{y})' />
+<BlockMath math="\theta := \theta - \frac{\alpha}{m}X^T(g(X\theta)-\vec{y})" />
 
 This is simple to implement in Python as a one-liner:
 
@@ -342,9 +342,9 @@ This was an improvement over my submission from last year, which was a linear re
 ![Kaggle leaderboard screenshot](./images/kaggle-score-logistic.png)
 
 <center>
-	<em>
-		<strong>Figure 2:</strong> Pics or it didn't happen
-	</em>
+  <em>
+    <strong>Figure 2:</strong> Pics or it didn't happen
+  </em>
 </center>
 
 ## Conclusion
