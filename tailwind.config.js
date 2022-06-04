@@ -1,9 +1,11 @@
 module.exports = {
-	content: ['./src/**/*.{js,jsx,ts,tsx}'],
+	purge: {
+		enabled: process.env.NODE_ENV === 'production',
+		content: ['components/**/*.tsx', 'pages/**/*.tsx', 'pages/**/*.mdx'],
+	},
 	theme: {
 		fontFamily: {
 			sans: [
-				'Urbanist',
 				'DM Sans',
 				'system-ui',
 				'-apple-system',
@@ -74,7 +76,7 @@ module.exports = {
 			},
 			colors: {
 				// custom colors
-				space: '#1c1f29',
+				space: '#070d2c',
 				orange: '#ff3f0a',
 				cyan: '#1ac8ed',
 				spring: '#0fff95',
