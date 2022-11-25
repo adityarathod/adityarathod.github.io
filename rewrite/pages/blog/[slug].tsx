@@ -23,6 +23,8 @@ import Head from "next/head";
 import Image from "next/image";
 import MultiCode from "../../components/blog-components/multi-code";
 import Link from "next/link";
+import { NextSeo } from "next-seo";
+import defaultSeoSettings from "../../utils/default-seo";
 
 // Custom components/renderers to pass to MDX.
 // Since the MDX files aren't loaded by webpack, they have no knowledge of how
@@ -53,6 +55,14 @@ export default function PostPage({ source, frontMatter }: PostPageProps) {
       <Head>
         <title>{frontMatter.title} | Aditya Rathod</title>
       </Head>
+      <NextSeo
+        title={frontMatter.title}
+        description={frontMatter.description}
+        openGraph={{
+          type: "article",
+          article: { publishedTime: new Date(frontMatter.date).toISOString() },
+        }}
+      />
       <div className="post-header mb-8">
         <h1 className="text-3xl mb-1 font-semibold">{frontMatter.title}</h1>
         <h3 className="text-md text-cyan uppercase mb-3 font-semibold">

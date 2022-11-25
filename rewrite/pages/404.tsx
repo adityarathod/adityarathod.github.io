@@ -1,10 +1,14 @@
 import Link from "next/link";
 import Image from "next/image";
 import React from "react";
+import Head from "next/head";
 
 export default function NotFoundPage() {
   return (
-    <section className="mt-24 text-ceanter">
+    <section className="mt-24">
+      <Head>
+        <title>Not Found | Aditya Rathod</title>
+      </Head>
       <div className="max-w-[500px] max-h-[500px] aspect-square relative mx-auto">
         <div className="w-full h-full absolute top-0 left-0">
           <Image

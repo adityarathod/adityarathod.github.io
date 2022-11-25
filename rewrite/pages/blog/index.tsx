@@ -1,5 +1,7 @@
 import fs from "fs";
 import matter from "gray-matter";
+import { NextSeo } from "next-seo";
+import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import path from "path";
@@ -57,6 +59,13 @@ export default function PostIndex({ posts }: PostIndexProps) {
   return (
     <PostLayout>
       <main>
+        <Head>
+          <title>Writing | Aditya Rathod</title>
+        </Head>
+        <NextSeo
+          title="Writing"
+          description="Musings on tech, life, and whatever else comes to mind."
+        />
         <h1 className="text-4xl font-bold mb-4">Writing</h1>
         {tag && (
           <h2 className="text-md font-medium my-2">
