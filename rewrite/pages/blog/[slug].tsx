@@ -84,7 +84,6 @@ export default function PostPage({ source, frontMatter }: PostPageProps) {
           "prose-a:no-underline"
         )}
       >
-        {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
         <MDXRemote {...(source as any)} components={components} />
       </main>
     </PostLayout>

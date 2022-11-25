@@ -40,7 +40,6 @@ export default function MultiCode({ tabs }: MultiCodeProps) {
           margin: 0,
           borderRadius: "0.375rem",
         }}
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         {...(tabs[curTab] as any)}
       >
         {tabs[curTab].content}

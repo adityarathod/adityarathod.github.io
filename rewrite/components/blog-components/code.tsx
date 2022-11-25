@@ -21,7 +21,6 @@ export default function Code({ className, ...props }: CodeProps) {
       wrapLines
       showLineNumbers
       style={atomOneDark}
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       {...(props as any)}
     />
   ) : (
