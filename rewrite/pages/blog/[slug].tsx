@@ -24,7 +24,6 @@ import Image from "next/image";
 import MultiCode from "../../components/blog-components/multi-code";
 import Link from "next/link";
 import { NextSeo } from "next-seo";
-import defaultSeoSettings from "../../utils/default-seo";
 
 // Custom components/renderers to pass to MDX.
 // Since the MDX files aren't loaded by webpack, they have no knowledge of how
@@ -70,7 +69,7 @@ export default function PostPage({ source, frontMatter }: PostPageProps) {
         </h3>
         {frontMatter.tags.map((tag, tIdx) => (
           <Link
-            href={`/blog/?tag=${tag}`}
+            href={`/writing?tag=${tag}`}
             className="inline mr-2 py-1 px-2 rounded-sm bg-gray-800 text-white text-xs hover:text-gray-300"
             key={tIdx}
           >

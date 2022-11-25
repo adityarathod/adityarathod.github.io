@@ -177,7 +177,7 @@ export const projects: Record<number, ProjectData[]> = {
         "Developed a question-answering system for HQ Trivia app with realtime OCR in a weekend, with blog post explaining how to mitigate such approaches. Blog post was referenced in articles by The Verge and the Washington Post.",
       image: "/hqtrivia.svg",
       color: "#36399a",
-      link: "/blog/protect-trivia-from-bots/",
+      link: "/blog/protect-trivia-from-bots",
     },
   ],
 };

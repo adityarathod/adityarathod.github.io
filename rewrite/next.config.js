@@ -4,4 +4,8 @@ module.exports = {
   pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
   swcMinify: true,
   reactStrictMode: true,
+  // for static export
+  images: {
+    unoptimized: true
+  }
 }

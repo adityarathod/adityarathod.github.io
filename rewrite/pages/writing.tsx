@@ -5,9 +5,9 @@ import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import path from "path";
-import PostLayout from "../../components/post-layout";
-import PostFrontmatter from "../../types/post-frontmatter";
-import { postFilePaths, POSTS_PATH } from "../../utils/mdxUtils";
+import PostLayout from "../components/post-layout";
+import PostFrontmatter from "../types/post-frontmatter";
+import { postFilePaths, POSTS_PATH } from "../utils/mdxUtils";
 
 interface MDXPost {
   content: string;
@@ -45,7 +45,7 @@ export default function PostIndex({ posts }: PostIndexProps) {
         <p className="mt-3">
           {post.data.tags.map((tag, tIdx) => (
             <Link
-              href={`/blog/?tag=${tag}`}
+              href={`/writing?tag=${tag}`}
               className="inline mr-2 py-1 px-2 rounded-sm bg-gray-800 text-white text-xs hover:text-gray-300"
               key={tIdx}
             >
@@ -75,7 +75,7 @@ export default function PostIndex({ posts }: PostIndexProps) {
             </span>
             <Link
               className="inline ml-5 text-white underline hover:text-gray-200"
-              href="/blog"
+              href="/writing"
             >
               Clear
             </Link>

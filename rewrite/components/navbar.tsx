@@ -26,16 +26,6 @@ const NavLink: FC<NavLinkProps> = (props: NavLinkProps) => {
 };
 
 export default function Navbar() {
-  // return (
-  //   <Link
-  //     href="/"
-  //     className="font-bold text-4xl text-white opacity-100 hover:opacity-80 tracking-tight italic"
-  //   >
-  //     aditya rathod
-  //     <span className="text-spring">.</span>
-  //   </Link>
-  // );
-
   return (
     <section>
       <div className="w-full bg-cyan h-[3px]"></div>
@@ -52,13 +42,13 @@ export default function Navbar() {
         <div className="flex-1"></div>
         <nav className="hidden sm:hidden md:flex lg:flex xl:flex flaex-1 flex-row items-center">
           <NavLink href="/#projects" text="Projects" />
-          <NavLink href="/blog" text="Writing" />
+          <NavLink href="/writing" text="Writing" />
           <NavLink href="/resume.pdf" text="Resume" external />
         </nav>
       </header>
       <nav className="mt-2 pl-8 flex sm:flex md:hidden flex-1 flex-row items-a">
         <NavLink href="/#projects" text="Projects" mobile />
-        <NavLink href="/blog" text="Writing" mobile />
+        <NavLink href="/writing" text="Writing" mobile />
         <NavLink href="/resume.pdf" text="Resume" external mobile />
       </nav>
     </section>
