@@ -1,9 +1,13 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-	content: ['./src/**/*.{js,jsx,ts,tsx}'],
-	theme: {
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx,mdx,md}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
 		fontFamily: {
 			sans: [
-				'Urbanist',
+				// 'Urbanist',
 				'DM Sans',
 				'system-ui',
 				'-apple-system',
@@ -18,63 +22,22 @@ module.exports = {
 				'Segoe UI Emoji',
 				'Segoe UI Symbol',
 				'Noto Color Emoji',
-			],
+      ],
+       mono: [
+        'ui-monospace',
+        'SFMono-Regular',
+        'Menlo',
+        'Monaco',
+        'Consolas',
+        '"Liberation Mono"',
+        '"Courier New"',
+        'monospace',
+      ],
 		},
 		extend: {
-			typography: {
-				DEFAULT: {
-					css: {
-						color: 'white',
-						maxWidth: '70ch',
-						a: {
-							color: '#1ac8ed',
-							textDecoration: 'none',
-							'&:hover': {
-								opacity: 0.9,
-							},
-							'> code': {
-								color: '#1ac8ed !important',
-							},
-						},
-						h1: {
-							color: 'white',
-						},
-						h2: {
-							color: 'white',
-						},
-						h3: {
-							color: 'white',
-						},
-						h4: {
-							color: 'white',
-						},
-						code: {
-							color: 'white',
-							'&::before': {
-								display: 'none',
-							},
-							'&::after': {
-								display: 'none',
-							},
-						},
-						strong: {
-							color: 'white',
-						},
-						em: {
-							color: 'white',
-						},
-						th: {
-							color: 'white',
-						},
-						blockquote: {
-							color: 'white',
-						},
-					},
-				},
-			},
 			colors: {
 				// custom colors
-				space: '#1c1f29',
+				space: 'rgb(7, 13, 44)',
 				orange: '#ff3f0a',
 				cyan: '#1ac8ed',
 				spring: '#0fff95',
