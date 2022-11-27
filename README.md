@@ -33,7 +33,4 @@ tags:
 
 ## Deployment
 
-- `yarn deploy` will handle the following things for you:
-  - Building a Next.js app with CSS purged and bundle size reduced
-  - Exporting said app to static HTML that can be pushed to Github Pages
-  - Pushing to the `master` branch
+- Deployed automatically to the `master` branch upon push to `dev` through Github Actions.
