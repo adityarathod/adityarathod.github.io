@@ -8,6 +8,17 @@ export interface ProjectData {
 }
 
 export const projects: Record<number, ProjectData[]> = {
+  2023: [
+    {
+      title: "Travyl: Tailored Travel Itineraries Using Large Language Models",
+      type: "Hackathon Project",
+      description:
+        "Worked in a team to build and pitch a solution in 24 hours that uses React and the OpenAI API to generate detailed travel itineraries based on customers' preferences, even enabling them to book flights based on the itinerary. First place winner of the American Airlines challenge at TAMUhack.",
+      image: null,
+      color: null,
+      link: "https://devpost.com/software/travyl",
+    },
+  ],
   2022: [
     {
       title: "Virtual TA Chatbot",
@@ -22,7 +33,7 @@ export const projects: Record<number, ProjectData[]> = {
       title: "EyeAlert: Eye Movement Tracking For Proactive Fatigue Alerts",
       type: "Hackathon Project",
       description:
-        "Worked in a team to build and pitch a solution in 36 hours that uses React Native and a machine learning model to track eye movements and display trends of fatigue during critical situations. Winner of the Lockheed Martin and Children's Health challenges.",
+        "Worked in a team to build and pitch a solution in 36 hours that uses React Native and a machine learning model to track eye movements and display trends of fatigue during critical situations. Winner of the Lockheed Martin and Children's Health challenge at HackDFW.",
       image: null,
       color: null,
       link: "https://devpost.com/software/defatigue",
