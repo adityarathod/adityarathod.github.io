@@ -10,6 +10,15 @@ export interface ProjectData {
 export const projects: Record<number, ProjectData[]> = {
   2023: [
     {
+      title: "Voidling: Chatbot for League of Legends Lore",
+      type: "Class Project",
+      description:
+        "Developed information retrieval pipeline for a League of Legends lore Discord chatbot. Used TF-IDF and SVD to generate a dense vector space model of the corpus for document retrieval. Leveraged DistilBERT-based model for extractive Q&A and FLAN-T5 finetuned model to generate conversational answers to queries on the corpus.",
+      image: null,
+      color: null,
+      link: "https://github.com/adityarathod/voidling",
+    },
+    {
       title: "Travyl: Tailored Travel Itineraries Using Large Language Models",
       type: "Hackathon Project",
       description:
@@ -27,7 +36,7 @@ export const projects: Record<number, ProjectData[]> = {
         "Developed a Python chatbot with a React frontend that can answer open-ended knowledge-based questions about data structures & algorithms and class administrivia.",
       image: null,
       color: null,
-      link: "https://virtual-ta-student.vercel.app/",
+      link: "https://github.com/adityarathod/virtual-ta",
     },
     {
       title: "EyeAlert: Eye Movement Tracking For Proactive Fatigue Alerts",
@@ -74,8 +83,6 @@ export const projects: Record<number, ProjectData[]> = {
       color: null,
       link: "https://github.com/adityarathod/jajapi",
     },
-  ],
-  2021: [
     {
       title: "ACM Stream Graphics",
       type: "Graphics Project",
@@ -84,6 +91,17 @@ export const projects: Record<number, ProjectData[]> = {
       image: null,
       color: null,
       link: "https://github.com/adityarathod/acm-stream-graphics",
+    },
+  ],
+  2021: [
+    {
+      title: "Log Ingest/Query Service @ Paycom",
+      type: "Internship Project",
+      description:
+        "Developed large-scale log event ingestion and query service leveraging C# and Elasticsearch. Created novel query language and query parser to enable users to query logs using simplified syntax.",
+      image: null,
+      color: null,
+      link: "https://linkedin.com/in/aditya-rathod",
     },
     {
       title: "Comparison of Online Portfolio Selection Algorithms",

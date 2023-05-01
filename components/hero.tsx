@@ -14,8 +14,9 @@ export default function Hero() {
         <span className="font-semibold text-spring">
           The University of Texas at Dallas
         </span>{" "}
-        with an eye for projects that involve processing large amounts of data.
-        I speak DataFrames, SQL, Python, and so much more.
+        with an eye for projects that involve processing and understanding large
+        amounts of data. I speak DataFrames, SQL, Python, Hadoop, and so much
+        more.
       </h2>
       <h2 className="leading-relaxed my-4">
         In my free time, I help{" "}
