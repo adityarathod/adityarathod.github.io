@@ -12,13 +12,17 @@ interface LayoutProps {
 const Layout: FC<LayoutProps> = (props) => {
   return (
     <>
-      <Navbar />
+      {/* Line decoration */}
+      <div className="w-full bg-cyan h-[3px]"></div>
       <DefaultSeo {...SEO} />
-      <div className="py-10 px-8 sm:px-8 md:px-10 lg:px-10 xl:px-10 max-w-6xl mx-auto">
+      {/* Layout container */}
+      <div className="px-8 sm:px-8 md:px-10 lg:px-10 xl:px-10 max-w-6xl mx-auto">
+        <Navbar />
         <Head>
           <title>Aditya Rathod</title>
         </Head>
-        {props.children}
+        {/* Main page content */}
+        <main className="py-10">{props.children}</main>
       </div>
     </>
   );

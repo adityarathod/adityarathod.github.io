@@ -7,7 +7,6 @@ module.exports = {
   theme: {
 		fontFamily: {
 			sans: [
-				// 'Urbanist',
 				'DM Sans',
 				'system-ui',
 				'-apple-system',

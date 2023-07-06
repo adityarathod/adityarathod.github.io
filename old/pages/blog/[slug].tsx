@@ -24,6 +24,7 @@ import Image from "next/image";
 import MultiCode from "../../components/blog-components/multi-code";
 import Link from "next/link";
 import { NextSeo } from "next-seo";
+import Layout from "../../components/layout";
 
 // Custom components/renderers to pass to MDX.
 // Since the MDX files aren't loaded by webpack, they have no knowledge of how
@@ -50,7 +51,7 @@ type PostPageStaticParams = ParsedUrlQuery & {
 
 export default function PostPage({ source, frontMatter }: PostPageProps) {
   return (
-    <PostLayout>
+    <Layout>
       <Head>
         <title>{frontMatter.title} | Aditya Rathod</title>
       </Head>
@@ -80,6 +81,7 @@ export default function PostPage({ source, frontMatter }: PostPageProps) {
       <main
         className={cl(
           "prose",
+          "prose-lg",
           "prose-invert",
           "max-w-none",
           "prose-pre:bg-transparent",
@@ -95,7 +97,7 @@ export default function PostPage({ source, frontMatter }: PostPageProps) {
       >
         <MDXRemote {...(source as any)} components={components} />
       </main>
-    </PostLayout>
+    </Layout>
   );
 }
 

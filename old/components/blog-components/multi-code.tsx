@@ -16,7 +16,7 @@ export default function MultiCode({ tabs }: MultiCodeProps) {
         {tabs.map((tab, idx) => (
           <button
             className={cl(
-              "py-2",
+              "py-1",
               "px-4",
               idx === curTab ? "bg-gray-900" : "hover:bg-gray-800",
               "min-w-[150px]",

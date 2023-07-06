@@ -5,7 +5,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import path from "path";
-import PostLayout from "../components/post-layout";
+import Layout from "../components/layout";
 import PostFrontmatter from "../types/post-frontmatter";
 import { postFilePaths, POSTS_PATH } from "../utils/mdxUtils";
 
@@ -57,7 +57,7 @@ export default function PostIndex({ posts }: PostIndexProps) {
     ));
 
   return (
-    <PostLayout>
+    <Layout>
       <main>
         <Head>
           <title>Writing | Aditya Rathod</title>
@@ -83,7 +83,7 @@ export default function PostIndex({ posts }: PostIndexProps) {
         )}
         {postList}
       </main>
-    </PostLayout>
+    </Layout>
   );
 }
 
