@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    @apply h-full;
+  }
+
+  body {
+    -webkit-tap-highlight-color: transparent;
+    @apply bg-zinc-100 text-black;
+  }
+
+  body.dark {
+    @apply bg-zinc-900 text-white;
+  }
+}
+
+.nav-link {
+  @apply ml-7 text-black opacity-80 transition-opacity hover:opacity-100 dark:text-white;
+}
+
+.nav-link.is-mobile {
+  @apply ml-0 mr-7;
+}
+
+.hero-line {
+  @apply mb-3;
+}
+
+.hero-line > strong {
+  @apply text-emerald-600 dark:text-spring;
+}
+
+.hero-line > a {
+  @apply font-bold text-blue-500 dark:text-blue-300;
+}
+
+.hero-line > a:after {
+  @apply ml-1 inline-block translate-y-1;
+  content: url('/ext-icon.svg');
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+}
+
+.dark .hero-line > a:after {
+  content: url('/ext-icon-dark.svg');
+}
+
+.katex {
+  font-size: 1.1em !important;
+}
+
+img[src$='#center'] {
+  @apply block text-center;
+}

@@ -1,0 +1,26 @@
+{{ $allFeatured := where site.RegularPages "Params.featured" true }}
+
+
+<h2 class="mb-4 text-2xl font-medium">featured work</h2>
+
+{{/* Show featured work */}}
+{{ range $allFeatured }}
+  <a
+    href="{{ .Permalink }}"
+    class="hover:underline-col mb-6 block hover:underline hover:decoration-black hover:decoration-2 dark:hover:decoration-white"
+  >
+    <h3 class="mb-1 mr-4 text-base md:mb-0 md:text-lg">
+      {{ .Title }}
+    </h3>
+    <p
+      class="whitespace-nowarap overflow-hidden overflow-ellipsis text-sm text-gray-700 dark:text-gray-300 md:text-base"
+    >
+      {{ with .Params.featuredSnippet }}{{ . }}{{ end }}
+    </p>
+  </a>
+{{ end }}
+
+{{/* Nothing to show case */}}
+{{ if le (len $allFeatured) 0 }}
+  <p class="text-gray-500 dark:text-gray-400">nothing yet!</p>
+{{ end }}

@@ -1,0 +1,28 @@
+{{ define "main" }}
+  <section class="mb-8 mt-0 md:mt-4">
+    <h1 class="mb-2 text-4xl font-bold">{{ .Title }}</h1>
+    <div
+      class="flex flex-row flex-wrap items-center justify-start text-gray-500 dark:text-gray-400"
+    >
+      <p>
+        {{ dateFormat "January 2006" .Date }}
+      </p>
+      {{ with .Params.Ptype }}
+        <p class="mx-2">•</p>
+        <p>{{ . }}</p>
+      {{ end }}
+    </div>
+  </section>
+  {{ partial "legacy-content.html" . }}
+  {{ partial "formatted-content.html" . }}
+  {{ if .Params.Link }}
+    <section class="mt-32 text-center">
+      <a
+        class="cursor-pointer rounded-full bg-black px-4 py-2 font-medium text-white hover:bg-zinc-800 dark:bg-white dark:text-black dark:hover:bg-zinc-200"
+        href="{{ .Params.Link }}"
+        target="_blank"
+        >Go to project &rarr;</a
+      >
+    </section>
+  {{ end }}
+{{ end }}

@@ -1,0 +1,21 @@
+{{ define "main" }}
+  <h1 class="mb-8 mt-0 text-4xl font-bold md:mt-4">{{ .Title }}</h1>
+
+  <ul>
+    {{ range .Pages }}
+      <li class="mb-3 flex flex-row items-center justify-start">
+        <a
+          href="{{ .Permalink }}"
+          class="hover:underline-col mr-4 flex-1 overflow-hidden text-ellipsis whitespace-nowrap text-lg hover:underline hover:decoration-black hover:decoration-2 dark:hover:decoration-white"
+          title="{{ .Title }}"
+          >{{ .Title }}</a
+        >
+        <span
+          class="block flex-none font-light text-gray-500 dark:text-gray-400"
+        >
+          {{ dateFormat "01.02.2006" .Date }}
+        </span>
+      </li>
+    {{ end }}
+  </ul>
+{{ end }}

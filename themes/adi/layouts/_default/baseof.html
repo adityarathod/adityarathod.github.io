@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+  {{ partial "head.html" . }}
+  <body class="dark">
+    {{/* Line decoration */}}
+    <div class="h-[3px] w-full bg-cyan"></div>
+
+    {{/* Layout container */}}
+    <div
+      class="mx-auto grid min-h-[calc(100vh-3px)] max-w-4xl grid-cols-1 grid-rows-[auto_1fr_auto] px-8 md:px-10"
+    >
+      <div>
+        {{/* Navbar */}}
+        {{ partial "header.html" . }}
+      </div>
+      <div class="py-10">{{ block "main" . }}{{ end }}</div>
+      {{/* Footer */}}
+      {{ partial "footer.html" . }}
+    </div>
+    {{ with .Params.math }}
+      {{ partial "math.html" . }}
+    {{ end }}
+  </body>
+</html>

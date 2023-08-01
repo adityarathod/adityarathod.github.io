@@ -1,0 +1,6 @@
+{{ define "main" }}
+  {{/* Redirect to /now */}}
+  <link rel="canonical" href="{{ `now` | relURL }}" />
+  <meta http-equiv="refresh" content="0; url={{ `now` | relURL }}" />
+  <p>there's no content here.</p>
+{{ end }}

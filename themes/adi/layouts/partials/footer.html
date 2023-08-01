@@ -1,0 +1,54 @@
+{{ template "_internal/google_analytics.html" . }}
+
+
+<footer
+  class="mt-16 flex flex-row items-center pb-10 text-sm text-zinc-500 dark:text-zinc-400"
+>
+  <div class="flex-1">
+    <p>&copy; {{ now.Year }} {{ .Site.Author.name }}. All rights reserved.</p>
+    <p class="text-xs opacity-50" id="special-msg">
+      you can't tell, but this site is very broken :)
+    </p>
+  </div>
+  <div>
+    <button class="btn-dark"></button>
+  </div>
+</footer>
+
+{{/* Dark mode */}}
+<script>
+  const htmlClass = document.body.classList;
+  const btnDark = document.querySelector('.btn-dark');
+
+  const setDark = (isDark) => {
+    htmlClass[isDark ? 'add' : 'remove']('dark');
+    localStorage.setItem('dark', isDark);
+    btnDark.innerHTML = isDark ? '☀️' : '🌙';
+  };
+
+  // init
+  const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+  if (!htmlClass.contains('dark')) {
+    setDark(false);
+  } else {
+    const darkVal = localStorage.getItem('dark');
+    setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+  }
+
+  // listen system
+  darkScheme.addEventListener('change', (event) => {
+    setDark(event.matches);
+  });
+
+  // manual switch
+  btnDark.addEventListener('click', () => {
+    setDark(localStorage.getItem('dark') !== 'true');
+  });
+</script>
+
+{{/* Special messages */}}
+<script>
+  const specialMessages = {{ with .Site.Params.Footer.SpecialMessages }}JSON.parse({{ . | jsonify }}){{ else }} [] {{ end }};
+  document.querySelector('#special-msg').textContent =
+    specialMessages[Math.floor(Math.random() * specialMessages.length)];
+</script>

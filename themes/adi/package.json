@@ -1,0 +1,19 @@
+{
+  "name": "adi-theme",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev:tailwind": "npx tailwindcss -i ./assets/app.css -o ./assets/main.css --watch",
+    "ci": "npx tailwindcss -i ./assets/app.css -o ./assets/main.css"
+  },
+  "dependencies": {
+    "@tailwindcss/typography": "^0.5.9",
+    "tailwindcss": "^3.3.2"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.8",
+    "prettier-plugin-go-template": "^0.0.13",
+    "prettier-plugin-tailwindcss": "^0.3.0"
+  }
+}
