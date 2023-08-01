@@ -1,0 +1,67 @@
+{{ define "main" }}
+  <h1 class="mb-8 mt-0 text-4xl font-bold md:mt-4">Now</h1>
+
+  {{/* Get the latest midnight UTC */}}
+  {{ $now := now.UTC }}
+  {{ $latest_midnight := (time ($now.Format "2006-01-02")).UTC }}
+  {{/* Set date threshold for "recent" posts (today - 30 days) */}}
+  {{ $recent_threshold := $latest_midnight.AddDate 0 0 -30 }}
+
+  {{ $recent_posts := slice }}
+  {{ $current_posts := slice }}
+  {{ $future_posts := slice }}
+
+  {{/* Segment content into recent, current, or future */}}
+  {{ range $post := .Pages }}
+    {{ if or $post.Params.Current (eq ($post.Date.Format "2006-01-02") ($now.Format "2006-01-02")) }}
+      {{/* Content that is labeled as "current" or is marked as "today" will be considered as such */}}
+      {{ $current_posts = $current_posts | append $post }}
+    {{ else if and ($post.Date.After $recent_threshold) ($post.Date.Before $now) }}
+      {{/* Content that is recent_threshold < date < now AND not labeled as "current" will be considered "recent" */}}
+      {{ $recent_posts = $recent_posts | append $post }}
+    {{ else if $post.Date.After $now }}
+      {{/* Content that is dated in the future will be considered as such */}}
+      {{ $future_posts = $future_posts | append $post }}
+    {{ else }}
+      {{ warnf "[NOW PAGE] Dead Content - %q will not be displayed. Consider removing it." ($post.Title | markdownify | plainify) }}
+    {{ end }}
+  {{ end }}
+
+  {{/* Sort content by date */}}
+  {{ $current_posts = sort $current_posts "Date" "desc" }}
+  {{ $recent_posts = sort $recent_posts "Date" "desc" }}
+  {{ $future_posts = sort $future_posts "Date" "asc" }}
+
+  {{/* Wrap content in a slice for display */}}
+  {{ $display_posts := slice
+    (slice "recent" $recent_posts)
+    (slice "current" $current_posts)
+    (slice "future" $future_posts)
+  }}
+
+  {{/* Display content */}}
+  {{ range $post_type := $display_posts }}
+    {{ $title := index $post_type 0 }}
+    <section class="mb-8">
+      <h2 class="mb-2 mt-0 text-xl font-medium md:mt-4">{{ $title }}</h2>
+      {{ partial "now-list.html" $post_type }}
+    </section>
+  {{ end }}
+
+
+  <hr class="mb-12 mt-16 border-dashed border-gray-400" />
+
+  <p class="text-sm italic">
+    this is a
+    <a
+      class="underline decoration-dotted underline-offset-2 hover:text-cyan"
+      href="https://sive.rs/nowff"
+      >now page</a
+    >. my version is heavily inspired by
+    <a
+      class="underline decoration-dotted underline-offset-2 hover:text-cyan"
+      href="https://taylor.town/now"
+      >taylor.town's /now page</a
+    >.
+  </p>
+{{ end }}

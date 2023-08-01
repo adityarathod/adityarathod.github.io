@@ -1,0 +1,28 @@
+<ul>
+  {{ $title := index . 0 }}
+  {{ $posts := index . 1 }}
+  {{ range $posts }}
+    <li class="mb-1 flex flex-row items-start justify-start">
+      <span
+        class="mr-4 block w-24 flex-none font-light text-zinc-500 dark:text-zinc-200"
+      >
+        {{ if (eq .Params.MonthOnly true) }}
+          {{ dateFormat "01.2006" .Date }}
+        {{ else if (eq $title "recent") }}
+          {{ dateFormat "01.02.2006" .Date }}
+        {{ else }}
+          {{ dateFormat "01.2006" .Date }}
+        {{ end }}
+      </span>
+      <span
+        class="flex-1 leading-tight dark:text-white text-black prose max-w-none dark:!prose-invert prose-a:underline-offset-2 prose-a:decoration-dotted hover:prose-a:text-cyan prose-code:before:content-none prose-code:after:content-none"
+        title="{{ .Title | markdownify | plainify }}"
+        >{{ .Title | markdownify }}</a>
+    </li>
+  {{ end }}
+  {{ if eq (len $posts) 0 }}
+    <li class="mb-1 italic text-zinc-400 dark:text-zinc-300">
+      nothing listed here yet.
+    </li>
+  {{ end }}
+</ul>

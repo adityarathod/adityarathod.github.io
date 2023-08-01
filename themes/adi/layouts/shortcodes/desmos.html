@@ -1,0 +1,7 @@
+{{ $graph_id := .Get "url" }}
+{{ $graph_url := printf "https://www.desmos.com/calculator/%s?embed" $graph_id }}
+<iframe
+  src="{{ $graph_url }}"
+  frameborder="0"
+  class="mx-auto aspect-video w-full max-w-lg"
+></iframe>

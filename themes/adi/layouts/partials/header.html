@@ -1,0 +1,26 @@
+{{/* Desktop */}}
+<header
+  class="mt-3 flex flex-row items-center justify-between py-3 sm:justify-between md:justify-start"
+>
+  <div class="mr-0 text-center sm:mr-0 md:mr-8 lg:mr-10">
+    <a
+      href="/"
+      class="text-2xl font-extrabold text-black opacity-100 hover:opacity-80 dark:text-white"
+    >
+      aditya<span class="text-green-500 dark:text-spring">.</span>
+    </a>
+  </div>
+  <div class="flex-1"></div>
+  <nav class="hidden flex-row items-center sm:hidden md:flex">
+    <a href="/now" class="nav-link">now</a>
+    <a href="/projects" class="nav-link">projects</a>
+    <a href="/writing" class="nav-link">writing</a>
+  </nav>
+</header>
+
+{{/* Mobile */}}
+<nav class="mt-2 flex flex-1 flex-row sm:flex md:hidden">
+  <a href="/now" class="nav-link is-mobile">now</a>
+  <a href="/projects" class="nav-link is-mobile">projects</a>
+  <a href="/writing" class="nav-link is-mobile">writing</a>
+</nav>

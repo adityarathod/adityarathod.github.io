@@ -1,0 +1,39 @@
+{{/* Determine if is old content */}}
+{{ $postdate := .Date }}
+{{ $now := now }}
+{{ $diff := now.Sub $postdate }}
+{{ $legacy_threshold := site.Params.LegacyThreshold | default 2 }}
+{{ $is_legacy := gt $diff.Seconds (mul 60 60 24 365 $legacy_threshold) }}
+
+{{/* Add exception for "evergreen" posts */}}
+{{ if .Params.evergreen }}
+  {{ $is_legacy = false }}
+{{ end }}
+
+{{/* Determine if it's a project or not. */}}
+{{ $is_project := eq .Type "projects" }}
+
+{{/* Display legacy warning for old content */}}
+{{ if $is_legacy }}
+  <aside
+    class="my-8 rounded-md border border-yellow-800 bg-yellow-700 bg-opacity-50 p-4 font-medium text-black dark:text-white"
+  >
+    ⚠️ This is
+    {{ if $is_project }}
+      an old project made
+    {{ else }}
+      legacy content written
+    {{ end }}
+    {{ with site.Params.LegacyThreshold }}
+      more than {{ . }} years ago.
+    {{ else }}
+      a while ago.
+    {{ end }}
+    {{ if $is_project }}
+      It may not be actively maintained or may not work as expected. It also may
+      suffer from bad code quality.
+    {{ else }}
+      It may not be accurate or as well-written as newer posts on this site.
+    {{ end }}
+  </aside>
+{{ end }}
