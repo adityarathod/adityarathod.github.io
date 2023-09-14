@@ -1,6 +1,6 @@
 ---
 title: "llama 2 experimentation"
-date: 2023-08-12
+date: 2023-10-12
 publishDate: 2023-07-31
 monthOnly: false
 ---
