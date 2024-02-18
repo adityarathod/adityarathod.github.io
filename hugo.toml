@@ -13,13 +13,13 @@ name = 'Aditya Rathod'
 
 # theme params
 [params]
-description = 'New-grad software engineer that loves building cool stuff with data and code.'
+description = 'Software engineer that loves building cool stuff with data and code.'
 
 # hero params
 [params.hero]
 bigTitle = "👋 hi, i'm aditya."
 description = [
-    "I'm a new-grad software engineer from California that loves building data-driven solutions to problems. I speak DataFrames, SQL, Python, Hadoop, and so much more.",
+    "I'm a software engineer with a focus on distributed systems and networks.",
     "In my free time, I learn guitar, cook, listen to [lots of music](https://www.last.fm/user/adibytes), and [feed the enemy team in League](https://na.op.gg/summoners/na/Dichotomous)."
 ]
 
@@ -27,17 +27,13 @@ description = [
 specialMessages = [
     "i hope i don't have to rewrite this again",
     "rfc 1925 section 2.8",
-    "hotel restaurants are just underground coworking spaces",
-    "do not the car",
+    "i feed on the 🙌 reactions by the senior engineers in slack when i post something useful",
+    "oncall is like solo carrying in league",
     "E492: not an editor command: meow",
-    "did i go viral on hacker news yet?",
-    "unforgiven, i'm a villain",
-    "너흰 없어 flavor",
-    "i'm a mess, mess, mess, mess, mess, mess, mess",
-    "i'm probably playing league rn",
-    "what's your eta? what's your eta?",
-    "^C^C^C^C^C^C^C^Cplsadjsfklasdfk",
-    "i'm in the arena trying things",
-    "new inflation hack: eat all meals at costco",
+    "me (pressing random buttons to see what happens): \"yeah oncall is fun it's like an adventure\"",
+    "i got gatos on my keyboard",
+    "a big component of your job as an engineer is to push back against bad ideas",
+    "the faang pm and faang engineer founder duo is unstoppable",
+    "have you ever written a design doc for your design doc",
     "if err != nil {",
 ]

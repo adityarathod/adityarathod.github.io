@@ -1,7 +1,7 @@
 ---
 title: "golang exploration"
-date: 2023-09-13
-publishDate: 2023-09-13
+date: 2024-02-12
+publishDate: 2024-02-12
 current: true
 ---
 
