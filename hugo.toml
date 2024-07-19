@@ -1,6 +1,6 @@
 # basic info
 title = 'aditya'
-baseURL = 'https://adityarathod.github.io'
+baseURL = 'https://adibytes.dev'
 languageCode = 'en-us'
 theme = 'adi'
 googleAnalytics = 'G-N0PPYCM4QZ'
@@ -17,10 +17,10 @@ description = 'Software engineer that loves building cool stuff with data and co
 
 # hero params
 [params.hero]
-bigTitle = "👋 hi, i'm aditya."
 description = [
-    "I'm a software engineer with a focus on distributed systems and networks.",
-    "In my free time, I learn guitar, cook, listen to [lots of music](https://www.last.fm/user/adibytes), and [feed the enemy team in League](https://na.op.gg/summoners/na/Dichotomous)."
+    "Hi! I'm a software engineer with a focus on distributed systems and networks.",
+    "I currently work on network-layer DDoS protection at AWS.",
+    "In my free time, I learn cook, travel, listen to [lots of music](https://www.last.fm/user/adibytes), and [feed the enemy team in League](https://www.op.gg/summoners/na/Dichotomous-NA1)."
 ]
 
 [params.footer]

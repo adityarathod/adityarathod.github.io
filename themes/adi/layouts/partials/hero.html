@@ -1,9 +1,6 @@
 <section
   class="max-w-a[715px] my-6 text-lg leading-loose md:my-10 md:mr-20 md:text-xl"
 >
-  <h1 class="mb-5 text-3xl font-semibold leading-[1.5] md:text-4xl">
-    {{ site.Params.Hero.BigTitle | default (print `hello there.`) }}
-  </h1>
   {{ $subtitle := site.Params.Hero.Description | default (slice `this is my cool website.`) }}
   <h2 class="my-1 leading-relaxed text-zinc-800 dark:text-zinc-100">
     {{ range $subtitle }}
