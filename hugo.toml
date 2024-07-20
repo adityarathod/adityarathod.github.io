@@ -20,7 +20,7 @@ description = 'Software engineer that loves building cool stuff with data and co
 description = [
     "Hi! I'm a software engineer with a focus on distributed systems and networks.",
     "I currently work on network-layer DDoS protection at AWS.",
-    "In my free time, I learn cook, travel, listen to [lots of music](https://www.last.fm/user/adibytes), and [feed the enemy team in League](https://www.op.gg/summoners/na/Dichotomous-NA1)."
+    "In my free time, I cook, travel, listen to [lots of music](https://www.last.fm/user/adibytes), and [feed the enemy team in League](https://www.op.gg/summoners/na/Dichotomous-NA1)."
 ]
 
 [params.footer]
