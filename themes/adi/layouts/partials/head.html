@@ -17,7 +17,7 @@
   <!-- Meta -->
   <meta name="theme-color" />
 
-  {{ $site_author := or site.Author.name site.Params.name site.Title }}
+  {{ $site_author := or site.Params.author.name site.Params.name site.Title }}
   {{ if eq .Kind "page" }}
     <meta name="title" content="{{ .Title }}" />
     <meta name="description" content="{{ .Summary }}" />

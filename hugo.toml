@@ -8,7 +8,7 @@ disableHugoGeneratorInject = true
 pluralizeListTitles = false
 
 # author info
-[author]
+[params.author]
 name = 'Aditya Rathod'
 
 # theme params
