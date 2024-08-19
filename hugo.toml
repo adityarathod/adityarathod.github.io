@@ -42,3 +42,6 @@ specialMessages = [
     "i'm so julia(lang.org)",
     "logged in and locked in",
 ]
+
+[markup.goldmark.renderer]
+unsafe = true
