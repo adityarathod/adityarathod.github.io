@@ -3,7 +3,7 @@ title: "Voidling: Chatbot for League of Legends Lore"
 date: 2023-04-15T12:29:00-07:00
 link: https://github.com/adityarathod/voidling
 ptype: Class Project
-featured: true
+featured: false
 featuredSnippet: q&a pipeline for one of my favorite games
 ---
 

@@ -3,7 +3,7 @@ title: "Travyl: Tailored Travel Itineraries Using Large Language Models"
 date: 2023-01-20T09:50:00-07:00
 link: https://github.com/adityarathod/travyl
 ptype: Hackathon Project
-featured: true
+featured: false
 featuredSnippet: tamuhack 2023 winner
 ---
 

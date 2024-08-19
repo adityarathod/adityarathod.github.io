@@ -2,6 +2,8 @@
 title: "Training a bot on my own messages for fun and chaos"
 summary: "Creating a chaotic personal AI bot by fine-tuning a language model on Discord messages."
 date: 2024-08-18T00:00:00.000Z
+featured: true
+featuredSnippet: a chaotic personal AI made by training a QLoRA adapter on my chat logs
 ---
 
 One of the concepts I’ve been mildly interested in recently is the concept of _personal AI_. With large language model output being extremely convincing, startups (such as [Pi](https://pi.ai) and [Friend](https://www.friend.com/)) have begun to promise AI with complex human characteristics like _empathy_ and _companionship_.
