@@ -42,7 +42,7 @@ jobs:
         id: pages
         uses: actions/configure-pages@v5
       - name: Install Node.js dependencies in theme
-        run: "cd themes/adi && npm run build && cd ../.."
+        run: "cd themes/adi && npm ci && npm run build && cd ../.."
       - name: Build with Hugo
         env:
           # For maximum backward compatibility with Hugo modules
