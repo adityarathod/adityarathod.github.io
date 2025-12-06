@@ -1,11 +1,11 @@
 {{ $allFeatured := where site.RegularPages "Params.featured" true }}
 
 
-<h2 class="mb-4 text-2xl font-medium">featured work</h2>
+{{/*  <h2 class="mb-4 text-2xl font-medium">featured work</h2>  */}}
 
 {{/* Show featured work */}}
 {{ range $allFeatured }}
-  <a
+  {{/*  <a
     href="{{ .Permalink }}"
     class="hover:underline-col mb-6 block hover:underline hover:decoration-black hover:decoration-2 dark:hover:decoration-white"
   >
@@ -17,7 +17,7 @@
     >
       {{ with .Params.featuredSnippet }}{{ . }}{{ end }}
     </p>
-  </a>
+  </a>  */}}
 {{ end }}
 
 {{/* Nothing to show case */}}

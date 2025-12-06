@@ -1,14 +1,14 @@
 {{ define "main" }}
-  <h1 class="mb-8 mt-0 text-4xl font-bold md:mt-4">Projects</h1>
+  <h1 class="md:mb-4 mb-8 mt-0 text-lg font-bold var-width-120 md:mt-4">Projects</h1>
 
   {{/* Group pages by year, then display them */}}
   {{ range (where .Site.RegularPages "Type" "in" (slice "projects")).GroupByDate "2006" }}
-    <section class="mb-8">
-      <h2 class="mb-2 mt-0 text-xl font-medium md:mt-4">{{ .Key }}</h2>
+    <section class="mb-8 grid md:grid-cols-[90px_auto] grid-cols-1 items-baseline">
+      <h2 class="opacity-95 mt-0 mb-4 md:mb-0 text-base md:mt-4 var-width-97">{{ .Key }}</h2>
       <ul>
         {{ range .Pages }}
           <li
-            class="mb-2 overflow-hidden text-ellipsis whitespace-nowrap text-lg"
+            class="mb-2 overflow-hidden text-ellipsis whitespace-nowrap var-width-110 font-medium text-base"
           >
             <a
               href="{{ .Permalink }}"

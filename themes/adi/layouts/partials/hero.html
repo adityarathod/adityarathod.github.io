@@ -1,21 +1,21 @@
 <section
-  class="max-w-a[715px] my-6 text-lg leading-loose md:my-10 md:mr-20 md:text-xl"
+  class="max-w-a[715px] my-6 leading-loose md:my-6 md:mr-20 md:text-xl"
 >
   {{ $subtitle := site.Params.Hero.Description | default (slice `this is my cool website.`) }}
-  <h2 class="my-1 leading-relaxed text-zinc-800 dark:text-zinc-100">
+  <h2 class="my-1 text-base font-serif leading-relaxed text-zinc-800 dark:text-zinc-100">
     {{ range $subtitle }}
       <p class="hero-line">{{ . | markdownify }}</p>
     {{ end }}
   </h2>
-  <h2 class="mt-6 flex flex-row">
+  <h2 class="mt-8 flex flex-row">
     <a
-      class="mr-5 text-black opacity-70 transition-opacity hover:opacity-100 dark:text-white"
+      class="mr-3 text-black opacity-70 transition-opacity hover:opacity-100 dark:text-white"
       href="https://github.com/adityarathod"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
+        width="20"
+        height="20"
         viewBox="0 0 24 24"
         class="w-7 fill-current"
       >
@@ -30,8 +30,8 @@
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
+        width="20"
+        height="20"
         viewBox="0 0 24 24"
         class="w-7 fill-current"
       >

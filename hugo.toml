@@ -1,5 +1,5 @@
 # basic info
-title = 'aditya'
+title = 'Aditya Rathod'
 baseURL = 'https://adibytes.dev'
 languageCode = 'en-us'
 theme = 'adi'
@@ -13,34 +13,14 @@ name = 'Aditya Rathod'
 
 # theme params
 [params]
-description = 'Software engineer that loves building cool stuff with data and code.'
+description = 'Software engineer with a focus on distributed systems and networks.'
 
 # hero params
 [params.hero]
 description = [
-    "Hi! I'm a software engineer with a focus on distributed systems and networks.",
+    "I'm a software engineer with a focus on distributed systems and networks.",
     "I currently work on network-layer DDoS protection at AWS.",
-    "In my free time, I cook, travel, listen to [lots of music](https://www.last.fm/user/adibytes), and [feed the enemy team in League](https://www.op.gg/summoners/na/Dichotomous-NA1)."
-]
-
-[params.footer]
-specialMessages = [
-    "i hope i don't have to rewrite this again",
-    "rfc 1925 section 2.8",
-    "i feed on the 🙌 reactions by the senior engineers in slack when i post something useful",
-    "oncall is like solo carrying in league",
-    "E492: not an editor command: meow",
-    "me (pressing random buttons to see what happens): \"yeah oncall is fun it's like an adventure\"",
-    "i got gatos on my keyboard",
-    "a big component of your job as an engineer is to push back against bad ideas",
-    "the faang pm and faang engineer founder duo is unstoppable",
-    "have you ever written a design doc for your design doc",
-    "if err != nil {",
-    "Ok() => println!(\"ok\")",
-    "ten toes in when we standin' on business",
-    "yeah i'm forklift<Esc>caw parrotvim certified caw CAW CAW",
-    "i'm so julia(lang.org)",
-    "logged in and locked in",
+    "In my free time, I cook, travel, and [discover new music](https://www.last.fm/user/adibytes)."
 ]
 
 [markup.goldmark.renderer]
