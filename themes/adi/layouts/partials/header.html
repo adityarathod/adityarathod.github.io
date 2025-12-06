@@ -1,26 +1,20 @@
 {{/* Desktop */}}
-<header
-  class="mt-3 flex flex-row items-center justify-between py-3 sm:justify-between md:justify-start"
->
+<header class="mt-24 flex flex-row items-center justify-between py-3 sm:justify-between md:justify-start">
   <div class="mr-0 text-center sm:mr-0 md:mr-8 lg:mr-10">
-    <a
-      href="/"
-      class="text-2xl font-extrabold text-black opacity-100 hover:opacity-80 dark:text-white"
-    >
-      aditya<span class="text-green-500 dark:text-spring">.</span>
+    <a href="/"
+      class="text-xl uppercase font-extrabold var-width-120 text-black opacity-100 hover:opacity-80 dark:text-white">
+      Aditya Rathod
     </a>
   </div>
   <div class="flex-1"></div>
-  <nav class="hidden flex-row items-center sm:hidden md:flex">
-    <a href="/now" class="nav-link">now</a>
-    <a href="/projects" class="nav-link">projects</a>
-    <a href="/writing" class="nav-link">writing</a>
+  <nav class="hidden text-sm flex-row items-center justify-center sm:hidden md:flex">
+    <a href="/projects" class="nav-link {{ if strings.HasPrefix .RelPermalink "/projects" }}is-current{{ end }}">Projects</a>
+    <a href="/writing" class="nav-link {{ if strings.HasPrefix .RelPermalink "/writing" }}is-current{{ end }}">Writing</a>
   </nav>
 </header>
 
 {{/* Mobile */}}
-<nav class="mt-2 flex flex-1 flex-row sm:flex md:hidden">
-  <a href="/now" class="nav-link is-mobile">now</a>
-  <a href="/projects" class="nav-link is-mobile">projects</a>
-  <a href="/writing" class="nav-link is-mobile">writing</a>
+<nav class="mt-2 text-sm flex flex-1 flex-row sm:flex md:hidden">
+  <a href="/projects" class="nav-link is-mobile {{ if strings.HasPrefix .RelPermalink "/projects" }}is-current{{ end }}">Projects</a>
+  <a href="/writing" class="nav-link is-mobile {{ if strings.HasPrefix .RelPermalink "/writing" }}is-current{{ end }}">Writing</a>
 </nav>

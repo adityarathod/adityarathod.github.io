@@ -1,0 +1,19 @@
+{{ define "main" }}
+  <ul>
+    {{ range .Pages }}
+      <li class="mb-4 flex flex-row items-center justify-start">
+        <a
+          href="{{ .Permalink }}"
+          class="hover:underline-col mr-4 flex-1 overflow-hidden text-ellipsis whitespace-nowrap text-base hover:underline hover:decoration-black hover:decoration-2 dark:hover:decoration-white font-medium var-width-110"
+          title="{{ .Title }}"
+          >{{ .Title }}</a
+        >
+        <span
+          class="block flex-none font-light text-gray-500 dark:text-gray-400"
+        >
+          {{ dateFormat "2006.01.02" .Date }}
+        </span>
+      </li>
+    {{ end }}
+  </ul>
+{{ end }}
