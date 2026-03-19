@@ -41,6 +41,6 @@
   <!---->
   {{ $custom := resources.Get "custom.css" }}
   <!---->
-  {{ $css := slice $main $custom | resources.Concat "main.css" | minify }}
+  {{ $css := slice $main $custom | resources.Concat "main.css" | minify | fingerprint }}
   <link rel="preload stylesheet" as="style" href="{{ $css.RelPermalink }}" />
 </head>
