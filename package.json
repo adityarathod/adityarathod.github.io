@@ -1,0 +1,14 @@
+{
+	"name": "aditya-website",
+	"version": "1.0.0",
+	"license": "UNLICENSED",
+	"private": true,
+	"devDependencies": {
+		"@tailwindcss/cli": "^4.1.17",
+		"@tailwindcss/typography": "^0.5.19",
+		"tailwindcss": "^4.1.17",
+		"prettier": "^3.7.3",
+		"prettier-plugin-go-template": "^0.0.15",
+		"prettier-plugin-tailwindcss": "^0.7.2"
+	}
+}

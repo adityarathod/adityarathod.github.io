@@ -1,8 +1,13 @@
 # macOS oddities
 .DS_Store
 
+# Node
+node_modules/
+package-lock.json
+
 # Generated files by hugo
 /public/
+/themes/adi/public/
 /resources/_gen/
 /assets/jsconfig.json
 hugo_stats.json

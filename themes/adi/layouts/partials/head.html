@@ -37,10 +37,8 @@
 
 
   <!-- Styles & Scripts -->
-  {{ $main := resources.Get "main.css" }}
-  <!---->
+  {{ $main := resources.Get "app.css" | css.TailwindCSS }}
   {{ $custom := resources.Get "custom.css" }}
-  <!---->
-  {{ $css := slice $main $custom | resources.Concat "main.css" | minify | fingerprint }}
+  {{ $css := slice $main $custom | resources.Concat "styles.css" | minify | fingerprint }}
   <link rel="preload stylesheet" as="style" href="{{ $css.RelPermalink }}" />
 </head>
